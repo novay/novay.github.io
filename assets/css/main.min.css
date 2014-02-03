@@ -3180,14 +3180,15 @@ body {
     animation-duration:1s
 }
 .site-title a {
-    color:#000
+    color:#000;
+    font-size: 2.0em;
+    line-height: 1em;
 }
 .site-description {
     margin-top:0;
-    font-family:'volkhov', serif;
+    font-family:'Lato', serif;
     font-size:16px;
     font-size:1rem;
-    font-style:italic;
     font-weight:400;
     -webkit-animation-delay:1s;
     -moz-animation-delay:1s;
@@ -3270,7 +3271,7 @@ span+.entry-title {
     margin-top:0
 }
 .entry-title {
-    font-family:'volkhov', serif;
+    font-family:'Lato', serif;
     font-size:36px;
     font-size:2.25rem;
     font-style:italic;
@@ -3526,7 +3527,7 @@ span+.entry-title {
     clear:both
 }
 .footer-wrapper a {
-    color:#000
+    color:#555
 }
 .social-icons {
     margin:1em 0 2em
