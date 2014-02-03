@@ -3529,6 +3529,9 @@ span+.entry-title {
 .footer-wrapper a {
     color:#555
 }
+.footer-wrapper a:hover {
+    color:#000
+}
 .social-icons {
     margin:1em 0 2em
 }
