@@ -15,7 +15,7 @@ owner:
   stackexchange:  novay
   tumblr:         novay
   soundcloud:     novay
-  google_plus:    novay
+  google_plus:    novaymawbowo
 
 google_analytics:   
 google_verify:      
@@ -32,8 +32,7 @@ links:
   - title: <i class="icon-map-marker"></i> About
     url: /about/
   - title: <i class="icon-archive"></i> Portofolio
-    url: http://github.com/novay
-    external: true
+    url: /portofolio/
 
 timezone:    Asia/Makassar
 future:      true
