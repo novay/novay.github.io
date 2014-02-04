@@ -29,8 +29,8 @@ links:
     url: /
   - title: <i class="icon-tags"></i> Blog
     url: /blog/
-  - title: <i class="icon-archive"></i> Portofolio
-    url: /portofolio/
+  - title: <i class="icon-archive"></i> Resume
+    url: /resume/
   - title: <i class="icon-map-marker"></i> About
     url: /about/
 

@@ -126,6 +126,7 @@ textarea {
     }
 }
 body {
+    background-image:url({{site.url}}/assets/img/bg/grey_@2X.png);
     margin-top:24px;
     font-size:16px
 }
