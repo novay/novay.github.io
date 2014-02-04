@@ -17,10 +17,10 @@ owner:
   soundcloud:     novay
   google_plus:    novaymawbowo
 
-google_analytics:   
-google_verify:      
+google_analytics: UA-47779092-1 
+google_verify:    google643ffce413f5fbae  
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+bing_verify:      7C34C63C60FFD8CCC9BBC577761AD928   
 
 # Links to include in top navigation
 # For external links add external: true
