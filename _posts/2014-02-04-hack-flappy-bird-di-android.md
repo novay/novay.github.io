@@ -16,7 +16,7 @@ Terkait dengan game tersebut, dalam postingan ini ane coba kasih trik gimana car
 Langsung ke TKP, ada beberapa hal yang harus Anda perhatikan :
 
  - Android Anda harus dalam keadaan ROOT, karena dibutuhkan kendali sistem untuk melakukan cara ini.
- - Gunakan File Manager yang bisa masuk kedalam root Anda. Dalam hal ini ane gunain Solid Explorer.
+ - Gunakan File Manager yang bisa masuk kedalam root Anda. Dalam hal ini ane gunain [Solid Explorer](https://play.google.com/store/apps/details?id=pl.solidexplorer&hl=in).
 
 Setelah memenuhi persyaratan diatas, selanjutnya lakukan langkah berikut
 
