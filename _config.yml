@@ -1,6 +1,6 @@
 title:            Novay Notes
 description:      Catatan Iseng Anak Akuntansi.
-url:              http://novay.web.id
+url:              http://localhost:4000
 logo:             site-logo.png
 disqus_shortname: novaynotes
 search:           true
