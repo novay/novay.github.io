@@ -13,12 +13,12 @@ Mungkin belakangan ini orang-orang sedang beramai-ramainya disibukkan dengan sal
 
 Terkait dengan game tersebut, dalam postingan ini ane coba kasih trik gimana caranya mengubah score yang kita peroleh tanpa bermain. Jujur sebelum ane nemuin ini trik, ane sempat mencapai score 128 loh. Beneran deh, sumpah XD
 
-Langsung ke TKP, ada beberapa hal yang harus Anda perhatikan :
+#### Beberapa hal yang harus Anda perhatikan :
 
  - Android Anda harus dalam keadaan ROOT, karena dibutuhkan kendali sistem untuk melakukan cara ini.
  - Gunakan File Manager yang bisa masuk kedalam root Anda. Dalam hal ini ane gunain [Solid Explorer](https://play.google.com/store/apps/details?id=pl.solidexplorer&hl=in).
 
-Setelah memenuhi persyaratan diatas, selanjutnya lakukan langkah berikut
+#### Selanjutnya lakukan langkah berikut
 
  * Buka file manager, lalu masuk ke `System root/data/data/com.dotgears.flappybird/shared_prefs/`
 
