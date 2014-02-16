@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Membuat Autentikasi Login dengan Laravel - Bagian 1 Pengolahan Database
+title: Autentikasi Login Laravel - 1. Pengolahan Database
 description: "Contoh penerapan pembuatan aplikasi autentikasi sederhana dengan menggunakan framework laravel 4."
 modified: 2013-04-03
 category: blog
