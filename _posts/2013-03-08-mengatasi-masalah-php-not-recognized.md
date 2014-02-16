@@ -10,7 +10,7 @@ share: true
 ---
 
 
-Siapa tau kiranya ada diantara kalian yang sudah pernah mengalami masalah ini, atau saat ini malah sedang bertemu masalah ini? 
+Siapa tau kiranya ada diantara kalian yang sudah pernah menghadapi masalah ini, atau saat ini malah sedang bertemu masalah ini? 
 
 Kalau begitu berarti Anda datang ke tempat yang lumayan tepat. 
 
@@ -18,7 +18,7 @@ Sebelumnya mari kita cocokkan masalah Anda dengan masalah yang saya maksud melal
 
 <center>
 	<a href="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-0.JPG" target="_blank"> 
-		<img src="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-0.JPG" width="300px"/>
+		<img src="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-0.JPG" width="500px"/>
 	</a>
 </center>
 
@@ -30,13 +30,13 @@ Oke langsung ke inti. Apabila Anda bertemu `php is not recognized...` ini, berar
 
 #### Bagaimana caranya? 
 
-Untuk diketahui dalam studi kasus kali ini saya menggunakan OS Windows 8 dan XAMPP sebagai penyedia PHPnya.
+Untuk diketahui dalam studi kasus kali ini saya menggunakan OS **Windows 8** dan **XAMPP** sebagai penyedia **PHP**nya.
 
 - Sekarang masuk ke **System Properties**, bisa gunakan tombol pintas **"WinFlag + PauseBreak"** pada keyboard.
 
 <center>
 	<a href="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-5.JPG" target="_blank"> 
-		<img src="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-5.JPG" width="300px"/>
+		<img src="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-5.JPG" width="500px"/>
 	</a>
 </center>
 
@@ -44,7 +44,7 @@ Untuk diketahui dalam studi kasus kali ini saya menggunakan OS Windows 8 dan XAM
 
 <center>
 	<a href="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-1.JPG" target="_blank"> 
-		<img src="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-1.JPG" width="300px"/>
+		<img src="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-1.JPG" width="50px"/>
 	</a>
 </center>
 
@@ -64,7 +64,9 @@ Untuk diketahui dalam studi kasus kali ini saya menggunakan OS Windows 8 dan XAM
 	</a>
 </center>
 
-- Terakhir pada `Variabel value`, tambahkan dibelakangnya `;C:\xampp\php` atau dimanapun Anda meletakkan direktori instalasi PHP. Jangan lupa meletakkan simbol `;` sebagai pemisah.
+- Terakhir pada `Variabel value`, tambahkan dibelakangnya `;C:\xampp\php` atau dimanapun Anda meletakkan direktori instalasi **PHP** Anda. 
+
+Jangan lupa meletakkan simbol `;` sebagai pemisah.
 
 <center>
 	<a href="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-4.JPG" target="_blank"> 
