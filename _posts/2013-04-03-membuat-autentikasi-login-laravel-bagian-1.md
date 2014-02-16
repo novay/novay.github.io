@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Autentikasi Login Laravel - 1. Pengolahan Database
+title: Autentikasi Login Laravel - 1 Pengolahan Database
 description: "Contoh penerapan pembuatan aplikasi autentikasi sederhana dengan menggunakan framework laravel 4."
 modified: 2013-04-03
 category: blog
@@ -9,12 +9,13 @@ comments: true
 share: true
 ---
 
-Sekarang saya akan mencoba membuat halaman *login* sederhana seperti yang biasa kita lihat pada website-website yang menerapkan sistem *member* pada umumnya. 
+Sekarang saya akan mencoba membuat halaman **login** sederhana seperti yang biasa kita lihat pada website-website yang menerapkan sistem **member** pada umumnya. 
 
-Seperti misalnya *Facebook*. Itu loh, yang masukin *username* sama *password*.
+Seperti misalnya **Facebook**. Itu loh, yang masukin `username` sama `password`.
 
 Sebelum memulainya ada beberapa yang perlu Anda ketahui:
-- OS yang saya gunakan **Windows 8**
+
+- Sistem Operasi yang saya gunakan **Windows 8**
 - Sistem yang akan dibangun menggunakan framework [Laravel](https://github.com/laravel/laravel) 
 - Pengelola database menggunakan [SQLITE]() untuk memudahkan proses pembelajaran.
 
@@ -32,12 +33,15 @@ Saya asumsikan bahwa kalian sudah pernah melakukan [instalasi Laravel]() sebelum
 
 Perhatikan dialog antara dua bocah berikut :
 
-Mayu = Database di sistem ini gunanya untuk apa? 
-Miku = Mari sedikit berkhayal, kira-kira biasanya yang di autentikasi itu apa? 
-Mayu = *username* dan *password*
-Miku = Oke, sekarang bagaimana agar proses autentikasi itu bisa dilakukan?
-Mayu = *lakukan proses pencocokan dengan "data yang sudah ada"*. 
-Miku = Itu artinya kita butuh *data yang sudah ada* yang selanjutnya akan kita tampung kedalam wadah yang namanya database. Bisa dipahami? Kalau belum baca ulang dialognya.
+* Mayu = Database di sistem ini gunanya untuk apa? 
+* Miku = Mari sedikit berkhayal, kira-kira yang akan di autentikasi itu apa? 
+* Mayu = *username* dan *password*
+* Miku = Oke, sekarang bagaimana agar proses autentikasi itu bisa dilakukan?
+* Mayu = *lakukan proses pencocokan dengan "data yang sudah ada"*. 
+* Miku = Itu artinya kita butuh *data yang sudah ada* yang selanjutnya akan kita tampung kedalam wadah yang namanya database. 
+
+Bisa dipahami? Kalau belum baca ulang dialognya.
+
 
 #### Generate Key
 
@@ -45,17 +49,16 @@ Seperti biasa sebelum kita memulai membuat sebuah aplikasi, tidak ada salahnya b
 
 php artisan key:generate
 
--Spoiler-
-- `php` merupakan perintah dasar milik "PHP". Untuk yang bertemu `php is not recognized...` bisa lihat [artikel berikut]().
-- `artisan`, mudahnya coba buka direktori proyek Anda, tepat disana Anda akan bertemu file bernama "artisan" tanpa ekstensi. Jadi, untuk mengakses perintah `artisan`, kita butuh file dengan nama sama. Sekarang sudah tau kan alasan kenapa dalam folder proyek kita ada file "artisan"? karena yang sebenarnya kita akses adalah file itu. Jadi, sebelum menggunakan perintah `php artisan ...` kita harus masuk dalam direktori proyek terlebih dahulu.
+- `php` merupakan perintah dasar milik "PHP". Untuk kalian yang bertemu istilah `php is not recognized...` bisa lihat [artikel ini]({{ site.url }}/blog/mengatasi-masalah-php-not-recognized/).
+- `artisan`, mudahnya coba buka direktori proyek Anda, tepat disana Anda akan bertemu file bernama **artisan** tanpa ekstensi. Jadi, untuk mengakses perintah `artisan`, kita butuh file dengan nama sama. Sekarang sudah tau kan alasan kenapa dalam folder proyek kita ada file **artisan**? karena yang sebenarnya kita akses adalah file itu. Jadi, sebelum menggunakan perintah `php artisan ...` kita harus masuk dalam direktori proyek terlebih dahulu.
 - `key:generate`, merupakan satu paket perintah untuk mengeksekusi / men-*generate* 32 digit karakter secara acak pada `app/config/app.php`. Apabila Anda ingin men-*generate* ulang, lakukan perintah yang sama.
 
 #### Atur *Database*
 
-Sekarang kita akan mulai membangun sebuah database. Sebelum memulainya, pastikan kamu telah menentukan jenis koneksi yang akan kamu gunakan. Coba sorot `app/config/database.php` lalu perhatikan baris berikut:
+Sekarang kita akan mulai membangun sebuah database. Sebelum memulainya, pastikan kamu telah menentukan jenis koneksi yang akan kamu gunakan. Coba sorot `app/config/database.php` lalu perhatikan baris ke 29 seperti berikut:
 
 ```
-29 'default' => 'mysql',
+'default' => 'mysql',
 ```
 
 Ubah `'mysql'` menjadi `'sqlite'`. Yang artinya kita mengubah penggunaan koneksi database kita menjadi 'SQLITE', sesuai yang saya katakan sebelumnya.
