@@ -66,12 +66,10 @@ Untuk diketahui dalam studi kasus kali ini saya menggunakan OS **Windows 8** dan
 
 - Terakhir pada `Variabel value`, tambahkan dibelakangnya `;C:\xampp\php` atau dimanapun Anda meletakkan direktori instalasi **PHP** Anda. 
 
-Jangan lupa meletakkan simbol `;` sebagai pemisah.
-
 <center>
 	<a href="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-4.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-4.JPG" width="300px"/>
 	</a>
 </center>
 
-Semoga bermanfaat.
+Jangan lupa meletakkan simbol `;` sebagai pemisah. Semoga bermanfaat.
