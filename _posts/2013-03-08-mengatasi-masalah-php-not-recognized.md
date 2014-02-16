@@ -25,7 +25,6 @@ Sebelumnya mari kita cocokkan masalah Anda dengan masalah yang saya maksud melal
 Oke langsung ke inti. Apabila Anda bertemu `php is not recognized...` ini, berarti ada beberapa kemungkinan :
 
 - PHP belum terinstall di laptop/komputer Anda.
-
 - *Yang kerap kali terjadi*, Anda belum men-*setting* variabel sistem Anda. 
 
 #### Bagaimana caranya? 

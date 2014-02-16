@@ -13,11 +13,11 @@ Sekarang saya akan mencoba membuat halaman **login** sederhana seperti yang bias
 
 Seperti misalnya **Facebook**. Itu loh, yang masukin `username` sama `password`.
 
-Sebelum memulainya ada beberapa yang perlu Anda ketahui:
+Sebelum memulainya ada beberapa hal yang perlu Anda ketahui:
 
-- Sistem Operasi yang saya gunakan **Windows 8**
-- Sistem yang akan dibangun menggunakan framework [Laravel](https://github.com/laravel/laravel) 
-- Pengelola database menggunakan [SQLITE]() untuk memudahkan proses pembelajaran.
+- Saya menggunakan **Windows 8**
+- Sistem yang dibangun menggunakan [Laravel](https://github.com/laravel/laravel) 
+- Pengelola database ialah [SQLITE]() untuk memudahkan proses pembelajaran.
 
 Harapan saya dalam panduan kali ini, setelahnya kalian akan mengetahui:
 
@@ -33,8 +33,8 @@ Saya asumsikan bahwa kalian sudah pernah melakukan [instalasi Laravel]() sebelum
 
 Perhatikan dialog antara dua bocah berikut :
 
-* Mayu = Database di sistem ini gunanya untuk apa? 
-* Miku = Mari sedikit berkhayal, kira-kira yang akan di autentikasi itu apa? 
+* Mayu = Database di sistem ini gunanya untuk apa ya? 
+* Miku = Mari berkhayal, kira-kira yang akan di autentikasi itu apa? 
 * Mayu = *username* dan *password*
 * Miku = Oke, sekarang bagaimana agar proses autentikasi itu bisa dilakukan?
 * Mayu = *lakukan proses pencocokan dengan "data yang sudah ada"*. 
@@ -42,16 +42,15 @@ Perhatikan dialog antara dua bocah berikut :
 
 Bisa dipahami? Kalau belum baca ulang dialognya.
 
-
 #### Generate Key
 
 Seperti biasa sebelum kita memulai membuat sebuah aplikasi, tidak ada salahnya bila kita membuat sebuah *encyption key* terlebih dahulu. Ya, fungsinya semata-mata untuk membuat aplikasi kita jauh lebih aman. Data yang mungkin akan di enkripsi salah satunya seperti *cookies*. Caranya menggunakan perintah **artisan** lewat **CMD** melalui direktori laravel Anda:
 
 php artisan key:generate
 
-- `php` merupakan perintah dasar milik "PHP". Untuk kalian yang bertemu istilah `php is not recognized...` bisa lihat [artikel ini]({{ site.url }}/blog/mengatasi-masalah-php-not-recognized/).
-- `artisan`, mudahnya coba buka direktori proyek Anda, tepat disana Anda akan bertemu file bernama **artisan** tanpa ekstensi. Jadi, untuk mengakses perintah `artisan`, kita butuh file dengan nama sama. Sekarang sudah tau kan alasan kenapa dalam folder proyek kita ada file **artisan**? karena yang sebenarnya kita akses adalah file itu. Jadi, sebelum menggunakan perintah `php artisan ...` kita harus masuk dalam direktori proyek terlebih dahulu.
-- `key:generate`, merupakan satu paket perintah untuk mengeksekusi / men-*generate* 32 digit karakter secara acak pada `app/config/app.php`. Apabila Anda ingin men-*generate* ulang, lakukan perintah yang sama.
+- `php` merupakan perintah dasar milik "PHP" yang hanya bisa dieksekusi apabila kita telah menginstall PHP. Untuk kalian yang bertemu istilah `php is not recognized...` bisa lihat [artikel ini]({{ site.url }}/blog/mengatasi-masalah-php-not-recognized/).
+- `artisan`, mudahnya coba buka direktori proyek Anda, tepat disana Anda akan bertemu file bernama **artisan** tanpa ekstensi. Jadi, untuk mengakses perintah `artisan`, kita butuh file dengan nama sama. Sekarang sudah tau kan alasan kenapa dalam folder proyek kita ada file **artisan**? karena yang sebenarnya kita akses adalah file itu. Jadi, sebelum menggunakan perintah `php artisan ...` posisi kita harus berada tepat dimana file **artisan** itu berada dalam direktori proyek kita.
+- `key:generate`, merupakan satu paket perintah untuk mengeksekusi / men-*generate* 32 digit karakter secara acak pada `app/config/app.php`. Apabila Anda ingin men-*generate* ulang, tinggal lakukan perintah yang sama.
 
 #### Atur *Database*
 
@@ -61,10 +60,10 @@ Sekarang kita akan mulai membangun sebuah database. Sebelum memulainya, pastikan
 'default' => 'mysql',
 ```
 
-Ubah `'mysql'` menjadi `'sqlite'`. Yang artinya kita mengubah penggunaan koneksi database kita menjadi 'SQLITE', sesuai yang saya katakan sebelumnya.
+Ubah `'mysql'` menjadi `'sqlite'`. Yang artinya kita mengubah penggunaan koneksi database kita menjadi 'SQLITE', sesuai dengan yang saya rencanakan sebelumnya.
 
 "" 
-Secara *default*, laravel menyediakan file sqlite kosong yang siap pakai didalam folder `app/database/` dengan nama `production.sqlite`. Anda diperbolehkan mengubah nama serta memindahkan letak file yang disediakan tersebut dengan ketentuan Anda harus memperhatikan isi file `app/config/database.php` pada baris `51`.
+Secara *default*, laravel menyediakan file **sqlite** kosong yang siap pakai didalam folder `app/database/` dengan nama `production.sqlite`. Anda diperbolehkan mengubah nama serta memindahkan letak file yang disediakan tersebut dengan ketentuan Anda harus memperhatikan isi file `app/config/database.php` pada baris `51`.
 ""
 
 #### Migrations
@@ -75,12 +74,12 @@ Laravel memungkinkan Anda untuk menciptakan sebuah file *migration* dengan hanya
 
 `php artisan migrate:make buat_tabel_pengguna ––table=pengguna ––create`
 
--Spoiler-
-`migrate:make` merupakan satu paket perintah untuk menciptakan file *migration*.
-`buat_tabel_pengguna` akan menjadi bagian dari nama file yang diciptakan *####_##_##_######_buat_tabel_pengguna.php*. Simbol # menggantikan angka pada waktu sekarang berurutan seperti ini : `Tahun_Bulan_Tanggal_JamMenitDetik`. Semoga paham XD.
-`--table=pengguna --create`, sebenarnya ini sifatnya *optional*, bisa digunakan bisa tidak, perintah ini akan sedikit mempengaruhi isi file *migration* dengan fungsi *Blueprint*, dan menjadikan file Anda siap pakai. 
+- `migrate:make` merupakan satu paket perintah untuk menciptakan file *migration*.
+- `buat_tabel_pengguna` akan menjadi bagian dari nama file yang diciptakan *####_##_##_######_buat_tabel_pengguna.php*. Simbol # menggantikan angka pada waktu sekarang berurutan seperti ini : `Tahun_Bulan_Tanggal_JamMenitDetik`. Semoga paham XD.
+- `--table=pengguna --create`, sebenarnya ini sifatnya *optional*, bisa digunakan bisa tidak, perintah ini akan sedikit mempengaruhi isi file *migration* dengan fungsi *Blueprint*, sehingga menjadikan file tersebut siap pakai, dalam arti file yang diciptakan telah menyebut nama tabel sekaligus mengisinya dengan beberapa `field`. 
 
 Secara keseluruhan perintah tersebut secara otomatis akan menghasilkan sebuah file ke dalam folder `app/database/migrations` dengan nama *####_##_##_######_buat_tabel_pengguna.php*. Sekarang buka file yang dihasilkan tersebut lalu tambahkan beberapa baris syntax menjadi seperti berikut :
+
 
 ```
 // app/database/migrations/####_##_##_######_buat_tabel_pengguna.php
