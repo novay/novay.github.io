@@ -44,7 +44,7 @@ Untuk diketahui dalam studi kasus kali ini saya menggunakan OS **Windows 8** dan
 
 <center>
 	<a href="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-1.JPG" target="_blank"> 
-		<img src="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-1.JPG" width="50px"/>
+		<img src="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-1.JPG" width="500px"/>
 	</a>
 </center>
 
