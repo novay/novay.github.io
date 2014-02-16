@@ -2,7 +2,7 @@
 layout: post
 title: Hack Flappy Bird di Android
 description: "Disini dijelaskan cara melakukan hacking score pada game Flappy Bird untuk Android."
-modified: 2013-05-31
+modified: 2014-02-04
 category: blog
 tags: [android, games, flappy-bird]
 comments: true
