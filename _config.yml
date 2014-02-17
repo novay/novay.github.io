@@ -1,6 +1,6 @@
 title:            Novay Notes
 description:      Catatan Iseng Anak Akuntansi.
-url:              http://novay.github.io
+url:              http://novay.web.id
 logo:             site-logo.png
 disqus_shortname: novaynotes
 search:           true
@@ -18,7 +18,7 @@ owner:
   google_plus:    novaymawbowo
 
 google_analytics: UA-47779092-1 
-google_verify:    google643ffce413f5fbae  
+google_verify:    miCVO93n3KnkRmWe_kgLGdeJyowTdI6kSJI4-7qFQA4
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:      7C34C63C60FFD8CCC9BBC577761AD928   
 
