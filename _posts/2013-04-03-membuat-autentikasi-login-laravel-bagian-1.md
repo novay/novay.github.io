@@ -46,9 +46,9 @@ Bisa dipahami? Kalau belum baca ulang dialognya.
 
 Seperti biasa sebelum kita memulai membuat sebuah aplikasi, tidak ada salahnya bila kita membuat sebuah *encyption key* terlebih dahulu. Ya, fungsinya semata-mata untuk membuat aplikasi kita jauh lebih aman. Data yang mungkin akan di enkripsi salah satunya seperti *cookies*. Caranya menggunakan perintah **artisan** lewat **CMD** melalui direktori laravel Anda:
 
-	php artisan key:generate
+`php artisan key:generate`
 
-- `php` merupakan perintah dasar milik **PHP** yang hanya bisa dieksekusi apabila kita telah menginstall **PHP**. Untuk kalian yang bertemu istilah `php is not recognized...` bisa lihat [artikel ini]({{ site.url }}/blog/mengatasi-masalah-php-not-recognized/).
+- `php` merupakan perintah dasar milik **PHP** yang hanya bisa dieksekusi apabila kita telah menginstall **PHP**. Untuk kalian yang bertemu istilah `php is not recognized...` bisa lihat [artikel ini]({{ site.url }}/blog/2013/03/08/mengatasi-masalah-php-not-recognized/).
 - `artisan`, mudahnya coba buka direktori proyek Anda, tepat disana Anda akan bertemu file bernama **artisan**. Jadi, untuk mengakses perintah `artisan` pada `php artisan ...`, kita butuh file dengan nama sama. Sekarang sudah tau kan alasan kenapa dalam folder proyek kita ada file **artisan**? karena yang sebenarnya kita akses adalah file **artisan** tersebut. Jadi, sebelum menggunakan perintah `php artisan ...` posisi kita harus berada tepat dimana file **artisan** itu berada dalam direktori proyek kita.
 - `key:generate`, merupakan satu paket perintah untuk mengeksekusi / men-*generate* 32 digit karakter secara acak pada `app/config/app.php`. Apabila Anda ingin men-*generate* ulang, tinggal lakukan perintah yang sama.
 
@@ -56,7 +56,7 @@ Seperti biasa sebelum kita memulai membuat sebuah aplikasi, tidak ada salahnya b
 
 Sekarang kita akan mulai membangun sebuah database. Sebelum memulainya, pastikan kamu telah menentukan jenis koneksi yang akan kamu gunakan. Coba sorot `app/config/database.php` lalu perhatikan baris ke 29 seperti berikut:
 
-	'default' => 'mysql',
+`'default' => 'mysql',`
 
 Ubah `'mysql'` menjadi `'sqlite'`. Yang artinya kita mengubah penggunaan koneksi database kita menjadi 'SQLITE', sesuai dengan yang saya rencanakan sebelumnya.
 
