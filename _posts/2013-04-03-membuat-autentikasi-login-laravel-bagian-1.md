@@ -78,46 +78,48 @@ Laravel memungkinkan Anda untuk menciptakan sebuah file *migration* dengan hanya
 
 Secara keseluruhan perintah tersebut secara otomatis akan menghasilkan sebuah file ke dalam folder `app/database/migrations` dengan nama *####_##_##_######_buat_tabel_pengguna.php*. Sekarang buka file yang dihasilkan tersebut lalu tambahkan beberapa baris syntax menjadi seperti berikut :
 
-	// app/database/migrations/####_##_##_######_buat_tabel_pengguna.php
+{% highlight php %}
+// app/database/migrations/####_##_##_######_buat_tabel_pengguna.php
+<?php
 
-	<?php
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
-	use Illuminate\Database\Schema\Blueprint;
-	use Illuminate\Database\Migrations\Migration;
+class BuatTabelPengguna extends Migration {
 
-	class BuatTabelPengguna extends Migration {
-
-		/**
-		 * Run the migrations.
-		 *
-		 * @return void
-		 */
-		public function up()
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('pengguna', function(Blueprint $table)
 		{
-			Schema::create('pengguna', function(Blueprint $table)
-			{
-				$table->increments('id');
+			$table->increments('id');
 
-				$table->string('nama_tampilan', 50);
-				$table->string('username', 50);
-				$table->string('password', 50);
-				$table->string('email', 50);
+			$table->string('nama_tampilan', 50);
+			$table->string('username', 50);
+			$table->string('password', 50);
+			$table->string('email', 50);
 
-				$table->timestamps();
-			});
-		}
-
-		/**
-		 * Reverse the migrations.
-		 *
-		 * @return void
-		 */
-		public function down()
-		{
-			Schema::drop('pengguna');
-		}
-
+			$table->timestamps();
+		});
 	}
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::drop('pengguna');
+	}
+
+}
+?>
+{% endhighlight %}
 
 Sekarang file *migration* ini memiliki tanggung jawab untuk menciptakan tabel bernama **pengguna** dan juga memiliki hak untuk menghapusnya *(rollback)*. Untuk menjalankannya cukup dengan mengetikkan perintah melalui **CMD**.
 
@@ -138,53 +140,56 @@ Sekarang kita sudah punya tabel, dan saatnya untuk kita isi.
 
 Tidak seperti *migration* yang mana filenya dibuat dengan hanya menggunakan perintah **artisan**. Untuk membuat file *Seed* kita harus menggunakan cara lama, yaitu dengan membuat file baru secara manual didalam folder `app/database/seeds`, lalu beri nama, misalnya `SeederTabelPengguna.php` dengan isi sebagai berikut :
 
-	// app/database/seeds/SeederTabelPengguna.php
+{% highlight php %}
+// app/database/seeds/SeederTabelPengguna.php
+<?php
 
-	<?php
+class SeederTabelPengguna extends Seeder
+{
 
-	class SeederTabelPengguna extends Seeder
+	public function run()
 	{
-
-		public function run()
-		{
-			DB::table('pengguna')
-				->delete()
-				->insert(array(
-					'nama_tampilan'	=> 'Noviyanto Rachmady',
-					'username'	=> 'novay',
-					'password'	=> Hash::make('admins'),
-					'email'	=> 'novay@otaku.si'
-				));
-		}
-
+		DB::table('pengguna')
+			->delete()
+			->insert(array(
+				'nama_tampilan'	=> 'Noviyanto Rachmady',
+				'username'	=> 'novay',
+				'password'	=> Hash::make('admins'),
+				'email'	=> 'novay@otaku.si'
+			));
 	}
+
+}
+?>
+{% endhighlight %}
 
 Apabila file diatas dieksekusi, maka file tersebut akan melakukan setiap tugas-tugasnya *per baris*, bermula dari memilih nama tabel yang akan diubah, menghapus bila tabel sudah ada sebelumnya, lalu kemudian mengisinya berdasarkan masing-masing kolom. Untuk nilai dari `password`, kita gunakan **Laravel's Hash Class** untuk meng-enkripsi nilai password kita dengan `Bcrypt`. Tujuannya ya untuk keamanan, lebih lanjut Anda bisa kunjungi [ini](http://laravel.com/docs/security).
 
 File *Seeder* kita telah jadi, dan sekarang tinggal bagaimana cara memerintahkan Laravel untuk mengeksekusi file tersebut. Mudahnya Anda telusur dan buka `app/database/seeds/DatabaseSeeder.php`, lalu selipkan syntax `$this->call('SeederTabelPengguna');` seperti berikut.
 
-	// app/database/seeds/DatabaseSeeder.php
+{% highlight php %}
+// app/database/seeds/DatabaseSeeder.php
+<?php
 
-	<?php
+class DatabaseSeeder extends Seeder {
 
-	class DatabaseSeeder extends Seeder {
+	/**
+	 * Run the database seeds.
+	 *
+	 * @return void
+	 */
+	public function run()
+	{
+		Eloquent::unguard();
 
-		/**
-		 * Run the database seeds.
-		 *
-		 * @return void
-		 */
-		public function run()
-		{
-			Eloquent::unguard();
+		// $this->call('UserTableSeeder');
 
-			// $this->call('UserTableSeeder');
-
-			$this->call('SeederTabelPengguna');
-
-		}
+		$this->call('SeederTabelPengguna');
 
 	}
+
+}
+{% endhighlight %}
 
 File **Seeder** telah berhasil dibuat. Dan langkah tersisa hanya tinggal menumpahkan *sesuatu* ini kedalam *botol* dengan cara:
 
