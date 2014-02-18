@@ -80,50 +80,46 @@ Laravel memungkinkan Anda untuk menciptakan sebuah file *migration* dengan hanya
 
 Secara keseluruhan perintah tersebut secara otomatis akan menghasilkan sebuah file ke dalam folder `app/database/migrations` dengan nama *####_##_##_######_buat_tabel_pengguna.php*. Sekarang buka file yang dihasilkan tersebut lalu tambahkan beberapa baris syntax menjadi seperti berikut :
 
+	// app/database/migrations/####_##_##_######_buat_tabel_pengguna.php
 
-```
-// app/database/migrations/####_##_##_######_buat_tabel_pengguna.php
+	<?php
 
-<?php
+	use Illuminate\Database\Schema\Blueprint;
+	use Illuminate\Database\Migrations\Migration;
 
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
+	class BuatTabelPengguna extends Migration {
 
-class BuatTabelPengguna extends Migration {
-
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
-		Schema::create('pengguna', function(Blueprint $table)
+		/**
+		 * Run the migrations.
+		 *
+		 * @return void
+		 */
+		public function up()
 		{
-			$table->increments('id');
+			Schema::create('pengguna', function(Blueprint $table)
+			{
+				$table->increments('id');
 
-			$table->string('nama_tampilan', 50);
-			$table->string('username', 50);
-			$table->string('password', 50);
-			$table->string('email', 50);
+				$table->string('nama_tampilan', 50);
+				$table->string('username', 50);
+				$table->string('password', 50);
+				$table->string('email', 50);
 
-			$table->timestamps();
-		});
+				$table->timestamps();
+			});
+		}
+
+		/**
+		 * Reverse the migrations.
+		 *
+		 * @return void
+		 */
+		public function down()
+		{
+			Schema::drop('pengguna');
+		}
+
 	}
-
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
-		Schema::drop('pengguna');
-	}
-
-}
-?>
-```
 
 Sekarang file *migration* ini memiliki tanggung jawab untuk menciptakan tabel bernama **pengguna** dan juga memiliki hak untuk menghapusnya *(rollback)*. Untuk menjalankannya cukup dengan mengetikkan perintah melalui **CMD**.
 
