@@ -33,12 +33,12 @@ Saya asumsikan bahwa kalian sudah pernah melakukan [instalasi Laravel]() sebelum
 
 Perhatikan dialog antara dua bocah berikut :
 
-* Mayu = Database di sistem ini gunanya untuk apa ya? 
-* Miku = Mari berkhayal, kira-kira yang akan di autentikasi itu apa? 
-* Mayu = *username* dan *password*
-* Miku = Oke, sekarang bagaimana agar proses autentikasi itu bisa dilakukan?
-* Mayu = *lakukan proses pencocokan dengan "data yang sudah ada"*. 
-* Miku = Itu artinya kita butuh *data yang sudah ada* yang selanjutnya akan kita tampung kedalam wadah yang namanya database. 
+	Mayu = Database di sistem ini gunanya untuk apa ya? 
+	Miku = Mari berkhayal, kira-kira yang akan di autentikasi itu apa? 
+	Mayu = *username* dan *password*
+	Miku = Oke, sekarang bagaimana agar proses autentikasi itu bisa dilakukan?
+	Mayu = *lakukan proses pencocokan dengan "data yang sudah ada"*. 
+	Miku = Itu artinya kita butuh *data yang sudah ada* yang selanjutnya akan kita tampung kedalam wadah yang namanya database. 
 
 Bisa dipahami? Kalau belum baca ulang dialognya.
 
@@ -140,59 +140,53 @@ Sekarang kita sudah punya tabel, dan saatnya untuk kita isi.
 
 Tidak seperti *migration* yang mana filenya dibuat dengan hanya menggunakan perintah **artisan**. Untuk membuat file *Seed* kita harus menggunakan cara lama, yaitu dengan membuat file baru secara manual didalam folder `app/database/seeds`, lalu beri nama, misalnya `SeederTabelPengguna.php` dengan isi sebagai berikut :
 
-```
-// app/database/seeds/SeederTabelPengguna.php
+	// app/database/seeds/SeederTabelPengguna.php
 
-<?php
+	<?php
 
-class SeederTabelPengguna extends Seeder
-{
-
-	public function run()
+	class SeederTabelPengguna extends Seeder
 	{
-		DB::table('pengguna')
-			->delete()
-			->insert(array(
-				'nama_tampilan' => 'Noviyanto Rachmady',
-				'username'		=> 'novay',
-				'password'		=> Hash::make('admins'),
-				'email'			=> 'novay@otaku.si'
-			));
-	}
 
-}
-?>
-```
+		public function run()
+		{
+			DB::table('pengguna')
+				->delete()
+				->insert(array(
+					'nama_tampilan' => 'Noviyanto Rachmady',
+					'username'		=> 'novay',
+					'password'		=> Hash::make('admins'),
+					'email'			=> 'novay@otaku.si'
+				));
+		}
+
+	}
 
 Apabila file diatas dieksekusi, maka file tersebut akan melakukan setiap tugas-tugasnya *per baris*, bermula dari memilih nama tabel yang akan diubah, menghapus bila tabel sudah ada sebelumnya, lalu kemudian mengisinya berdasarkan masing-masing kolom. Untuk nilai dari `password`, kita gunakan **Laravel's Hash Class** untuk meng-enkripsi nilai password kita dengan `Bcrypt`. Tujuannya ya untuk keamanan, lebih lanjut Anda bisa kunjungi [ini](http://laravel.com/docs/security).
 
 File *Seeder* kita telah jadi, dan sekarang tinggal bagaimana cara memerintahkan Laravel untuk mengeksekusi file tersebut. Mudahnya Anda telusur dan buka `app/database/seeds/DatabaseSeeder.php`, lalu selipkan syntax `$this->call('SeederTabelPengguna');` seperti berikut.
 
-```
-// app/database/seeds/DatabaseSeeder.php
+	// app/database/seeds/DatabaseSeeder.php
 
-<?php
+	<?php
 
-class DatabaseSeeder extends Seeder {
+	class DatabaseSeeder extends Seeder {
 
-	/**
-	 * Run the database seeds.
-	 *
-	 * @return void
-	 */
-	public function run()
-	{
-		Eloquent::unguard();
+		/**
+		 * Run the database seeds.
+		 *
+		 * @return void
+		 */
+		public function run()
+		{
+			Eloquent::unguard();
 
-		// $this->call('UserTableSeeder');
+			// $this->call('UserTableSeeder');
 
-		$this->call('SeederTabelPengguna');
+			$this->call('SeederTabelPengguna');
+
+		}
 
 	}
-
-}
-?>
-```
 
 File **Seeder** telah berhasil dibuat. Dan langkah tersisa hanya tinggal menumpahkan *sesuatu* ini kedalam *botol* dengan cara:
 
