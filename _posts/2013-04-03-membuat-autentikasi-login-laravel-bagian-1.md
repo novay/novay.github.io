@@ -33,12 +33,12 @@ Saya asumsikan bahwa kalian sudah pernah melakukan [instalasi Laravel]() sebelum
 
 Perhatikan dialog antara dua bocah berikut :
 
-	Mayu = Database di sistem ini gunanya untuk apa ya? 
-	Miku = Mari berkhayal, kira-kira yang akan di autentikasi itu apa? 
-	Mayu = *username* dan *password*
-	Miku = Oke, sekarang bagaimana agar proses autentikasi itu bisa dilakukan?
-	Mayu = *lakukan proses pencocokan dengan "data yang sudah ada"*. 
-	Miku = Itu artinya kita butuh *data yang sudah ada* yang selanjutnya akan kita tampung kedalam wadah yang namanya database. 
+Mayu = Database di sistem ini gunanya untuk apa ya? 
+Miku = Mari berkhayal, kira-kira yang akan di autentikasi itu apa? 
+Mayu = *username* dan *password*
+Miku = Oke, sekarang bagaimana agar proses autentikasi itu bisa dilakukan?
+Mayu = *lakukan proses pencocokan dengan "data yang sudah ada"*. 
+Miku = Itu artinya kita butuh *data yang sudah ada* yang selanjutnya akan kita tampung kedalam wadah yang namanya database. 
 
 Bisa dipahami? Kalau belum baca ulang dialognya.
 
@@ -46,10 +46,10 @@ Bisa dipahami? Kalau belum baca ulang dialognya.
 
 Seperti biasa sebelum kita memulai membuat sebuah aplikasi, tidak ada salahnya bila kita membuat sebuah *encyption key* terlebih dahulu. Ya, fungsinya semata-mata untuk membuat aplikasi kita jauh lebih aman. Data yang mungkin akan di enkripsi salah satunya seperti *cookies*. Caranya menggunakan perintah **artisan** lewat **CMD** melalui direktori laravel Anda:
 
-php artisan key:generate
+	php artisan key:generate
 
-- `php` merupakan perintah dasar milik "PHP" yang hanya bisa dieksekusi apabila kita telah menginstall PHP. Untuk kalian yang bertemu istilah `php is not recognized...` bisa lihat [artikel ini]({{ site.url }}/blog/mengatasi-masalah-php-not-recognized/).
-- `artisan`, mudahnya coba buka direktori proyek Anda, tepat disana Anda akan bertemu file bernama **artisan** tanpa ekstensi. Jadi, untuk mengakses perintah `artisan`, kita butuh file dengan nama sama. Sekarang sudah tau kan alasan kenapa dalam folder proyek kita ada file **artisan**? karena yang sebenarnya kita akses adalah file itu. Jadi, sebelum menggunakan perintah `php artisan ...` posisi kita harus berada tepat dimana file **artisan** itu berada dalam direktori proyek kita.
+- `php` merupakan perintah dasar milik **PHP** yang hanya bisa dieksekusi apabila kita telah menginstall **PHP**. Untuk kalian yang bertemu istilah `php is not recognized...` bisa lihat [artikel ini]({{ site.url }}/blog/mengatasi-masalah-php-not-recognized/).
+- `artisan`, mudahnya coba buka direktori proyek Anda, tepat disana Anda akan bertemu file bernama **artisan**. Jadi, untuk mengakses perintah `artisan` pada `php artisan ...`, kita butuh file dengan nama sama. Sekarang sudah tau kan alasan kenapa dalam folder proyek kita ada file **artisan**? karena yang sebenarnya kita akses adalah file **artisan** tersebut. Jadi, sebelum menggunakan perintah `php artisan ...` posisi kita harus berada tepat dimana file **artisan** itu berada dalam direktori proyek kita.
 - `key:generate`, merupakan satu paket perintah untuk mengeksekusi / men-*generate* 32 digit karakter secara acak pada `app/config/app.php`. Apabila Anda ingin men-*generate* ulang, tinggal lakukan perintah yang sama.
 
 #### Atur *Database*
