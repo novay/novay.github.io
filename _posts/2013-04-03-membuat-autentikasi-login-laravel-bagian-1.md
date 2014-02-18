@@ -56,9 +56,7 @@ php artisan key:generate
 
 Sekarang kita akan mulai membangun sebuah database. Sebelum memulainya, pastikan kamu telah menentukan jenis koneksi yang akan kamu gunakan. Coba sorot `app/config/database.php` lalu perhatikan baris ke 29 seperti berikut:
 
-```
-'default' => 'mysql',
-```
+	'default' => 'mysql',
 
 Ubah `'mysql'` menjadi `'sqlite'`. Yang artinya kita mengubah penggunaan koneksi database kita menjadi 'SQLITE', sesuai dengan yang saya rencanakan sebelumnya.
 
