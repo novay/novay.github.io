@@ -11,7 +11,7 @@ modified: 2013-09-13
 
 ![Me]({{site.url}}/assets/img/{{site.owner.avatar}}){: .profile .pull-right }
 
-**Pria kampung**, Ups... maaf, maksud kami **Pria Desa** berambut ikal yang terbilang lumayan muda ini saat ini sedang menjalani pendidikan di salah satu perguruan tinggi negeri saat tulisan ini dibuat, pun sebenarnya belum terlalu lama berkecipung didalam dunia *program memprogram* (Baca: **Programmer**). Namun begitu, ia mempunyai mimpi yang lumayan mulia walau hidup tanpa ada *talenta* dalam hal yang ia impikan tersebut. 
+**Pria kampung**, Ups... maaf, maksud kami **PRIA DESA** berambut ikal yang terbilang lumayan muda ini saat ini sedang menjalani pendidikan di salah satu perguruan tinggi negeri saat tulisan ini dibuat, pun sebenarnya belum terlalu lama berkecipung didalam dunia *program memprogram* (Baca: **Programmer**). Namun begitu, ia mempunyai mimpi yang lumayan mulia walau hidup tanpa ada *talenta* dalam hal yang ia impikan tersebut. 
 
 Ingin menjadi seorang *tukang program* merupakan keinginannya sejak lahir. **Maaf lagi, maksud kami**, sejak baru-baru ini. Bisa dikatakan bahwa ia belum memiliki kemampuan dalam hal yang ia impikan tersebut. Dan sepertinya saat ini dia pun masih sedang dalam tahap pembelajaran walau terlihat sedikit memaksakan diri. Dan sebelum kami menyudahi sumpah serapah ini, ia juga memberi wasiat untuk mengatakan bahwa ada sebuah halaman bertajuk **[Busy](/proyek/)**, dimana terdapat beberapa garapan yang sedang ia kerjakan disana, ujar si pria bertopi ini.
 

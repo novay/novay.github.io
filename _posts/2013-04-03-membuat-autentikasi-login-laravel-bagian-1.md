@@ -150,10 +150,10 @@ Tidak seperti *migration* yang mana filenya dibuat dengan hanya menggunakan peri
 			DB::table('pengguna')
 				->delete()
 				->insert(array(
-					'nama_tampilan' => 'Noviyanto Rachmady',
-					'username'		=> 'novay',
-					'password'		=> Hash::make('admins'),
-					'email'			=> 'novay@otaku.si'
+					'nama_tampilan'	=> 'Noviyanto Rachmady',
+					'username'	=> 'novay',
+					'password'	=> Hash::make('admins'),
+					'email'	=> 'novay@otaku.si'
 				));
 		}
 
