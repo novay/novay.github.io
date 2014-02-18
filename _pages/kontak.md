@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /about/
+permalink: /kontak/
 title: About Me
 tags: []
 modified: 2013-09-13

@@ -1,13 +1,13 @@
 title:            Novay Notes
 description:      Just a nonsense freelancer who've been always loving to be a freelance developer<br/> actually it let me be kept in the process of learning a new think. 
-url:              http://novay.web.id
+url:              http://localhost:4000
 logo:             site-logo.png
 disqus_shortname: novaynotes
 search:           true
 
 owner:
   name:           Noviyanto Rachmady
-  avatar:         avatar.jpg
+  avatar:         avatar.jpeg
   email:          novay@otaku.si
   twitter:        novaymawbowo        
   facebook:       novaymawbowo      
@@ -31,8 +31,8 @@ links:
     url: /blog/
   - title: <i class="icon-archive"></i> Resume
     url: /resume/
-  - title: <i class="icon-map-marker"></i> About
-    url: /about/
+  - title: <i class="icon-map-marker"></i> Contact
+    url: /kontak/
 
 timezone:    Asia/Makassar
 future:      true
@@ -40,7 +40,9 @@ pygments:    true
 markdown:    kramdown
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
+permalink:   /:categories/:year/:month/:day/:title/
+
+relative_permalinks: false
 
 kramdown:
   auto_ids: true
@@ -56,5 +58,5 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: class
 
-include: [".htaccess"]
+include: [".htaccess", "_pages"]
 exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
