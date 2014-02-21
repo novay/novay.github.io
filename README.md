@@ -1,6 +1,6 @@
 # My Personal Blog
 
-This is the data for my personal website. You can view this website at [novay.web.id](http://novay.web.id/)
+This is the data for my personal website. You can view this website at [blog.novay.web.id](http://novay.web.id/)
 
 I will combine all of contents from my previous dump blog which ever i wrote in this sites! It's like from 2002 until now will combined!
 
