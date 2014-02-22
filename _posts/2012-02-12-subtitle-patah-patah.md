@@ -49,8 +49,8 @@ Artikel ini untuk mereka yang mungkin beberapa diantaranya agak bingung dengan b
 - Perhatikan lalu masuki lokasi direktori *(1)*, pilih **VSFilter.dll** *(2)*, lalu tekan **Open** *(3)*
 
 <center>
-	<a href="{{ site.url }}/assets/post/2012-02-12-subtitle-patah-patah-4.PNG" target="_blank"> 
-		<img src="{{ site.url }}/assets/post/2012-02-12-subtitle-patah-patah-4.PNG" width="500px"/>
+	<a href="{{ site.url }}/assets/post/2012-02-12-subtitle-patah-patah-4.png" target="_blank"> 
+		<img src="{{ site.url }}/assets/post/2012-02-12-subtitle-patah-patah-4.png" width="500px"/>
 	</a>
 </center>
 
