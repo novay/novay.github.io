@@ -27,4 +27,6 @@ Langsung ke caranya yak :
 
 Kalian bisa menggunakan warna apa aja yang kalian mau. Tinggal ganti **Yellow** jadi red, blue, green, pink, dan lain-lain.
 
+Kalian juga bisa gunain semua tag **HTML** loh, ***h1, h2, h3**, bla bla bla... Tapi sayangnya di hape BB asli kalian bakalan di bilangin **Sok Programer**, kayak gue dong jadinya XD ngahaha...
+
 Semoga bermanfaat.
