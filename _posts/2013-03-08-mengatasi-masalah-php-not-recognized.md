@@ -16,11 +16,11 @@ Kalau begitu berarti Anda datang ke tempat yang lumayan tepat.
 
 Sebelumnya mari kita cocokkan masalah Anda dengan masalah yang saya maksud melalui gambar :
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-0.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-0.JPG" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 Oke langsung ke inti. Apabila Anda bertemu `php is not recognized...` ini, berarti ada beberapa kemungkinan :
 
@@ -33,42 +33,42 @@ Untuk diketahui dalam studi kasus kali ini saya menggunakan OS **Windows 8** dan
 
 - Sekarang masuk ke **System Properties**, bisa gunakan tombol pintas **"WinFlag + PauseBreak"** pada keyboard.
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-5.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-5.JPG" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 - Lalu pilih `Advanced system settings`.
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-1.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-1.JPG" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 - Pilih lagi `Environment Variables...`.
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-2.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-2.JPG" width="300px"/>
 	</a>
-</center>
+</center></figure>
 
 - Sekarang coba perhatikan tabel **System variables** (1), cari variabel **PATH** (2) pilih lalu tekan tombol `Edit...` (3).
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-3.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-3.JPG" width="300px"/>
 	</a>
-</center>
+</center></figure>
 
 - Terakhir pada `Variabel value`, tambahkan dibelakangnya `;C:\xampp\php` atau dimanapun Anda meletakkan direktori instalasi **PHP** Anda. 
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-4.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2013-03-08-mengatasi-masalah-php-not-recognized-4.JPG" width="300px"/>
 	</a>
-</center>
+</center></figure>
 
 Jangan lupa meletakkan simbol `;` sebagai pemisah. Semoga bermanfaat.

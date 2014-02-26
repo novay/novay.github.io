@@ -27,19 +27,19 @@ Kalau menurut saya pribadi, mungkin hanya beberapa saja pengguna ini yang bakala
 - Bisa langsung download [Composer](http://getcomposer.org/Composer-Setup.exe), ngga gede kok cuman 660kb.
 - Lakukan instalasi seperti biasa **Next**, **Next**, dan *eits*. Sebelum melanjutkan, telusur dulu posisi file **php.exe** Anda. Seperti gambar berikut :
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2012-07-24-installasi-composer-1.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2012-07-24-installasi-composer-1.JPG" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 - Lalu **Next** dan **Install**. Tunggu hingga proses download selesai *(koneksi internet dibutuhkan)* sampai **Finish**.
 - Setelah selesai, buktikan bila **composer** telah terinstall dengan sempurna seperti berikut
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2012-07-24-installasi-composer-2.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2012-07-24-installasi-composer-2.JPG" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 - Dan Happy Coding!

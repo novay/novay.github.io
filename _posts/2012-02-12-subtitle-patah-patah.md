@@ -24,50 +24,50 @@ Artikel ini untuk mereka yang mungkin beberapa diantaranya agak bingung dengan b
 - Install **xy-VSFilter**, Next > Install > Finish.
 - Buka Media Player Classic, pilih menu **View** lalu **Options**
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2012-02-12-subtitle-patah-patah-1.PNG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2012-02-12-subtitle-patah-patah-1.PNG" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 - Setelah form options terbuka, pilih **External Filters** *(1)*, kemudian tekan **Add Filter...** *(2)*.
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2012-02-12-subtitle-patah-patah-2.PNG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2012-02-12-subtitle-patah-patah-2.PNG" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 - Pada form **Select Filter** tekan **Browse...**
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2012-02-12-subtitle-patah-patah-3.PNG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2012-02-12-subtitle-patah-patah-3.PNG" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 - Perhatikan lalu masuki lokasi direktori *(1)*, pilih **VSFilter.dll** *(2)*, lalu tekan **Open** *(3)*
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2012-02-12-subtitle-patah-patah-4.png" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2012-02-12-subtitle-patah-patah-4.png" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 - Pastikan kedua **External Filters** terceklis seperti berikut
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2012-02-12-subtitle-patah-patah-5.PNG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2012-02-12-subtitle-patah-patah-5.PNG" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 - Kemudian pada sidebar options, pilih **Playback** *(1)* dan hilangkan ceklis pada **Auto-load subtitles** *(2)* lalu OK *(3)*
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2012-02-12-subtitle-patah-patah-6.PNG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2012-02-12-subtitle-patah-patah-6.PNG" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 - Sekarang coba dan rasakan bedanya. Semoga bermanfaat.

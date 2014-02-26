@@ -11,11 +11,11 @@ share: true
 
 Masalah ini biasanya kita temui saat kita ingin melakukan *Update* driver komputer/laptop, dalam hal ini anggap saja kita berniat ingin menemukan driver yang cocok via online langsung dari **Device Manager**. Akan tetapi, saat ingin di **Update** malah problem seperti berikut muncul :
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2013-01-16-masalah-windows-was-unable-to-istall-your-unknown-device-1.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2013-01-16-masalah-windows-was-unable-to-istall-your-unknown-device-1.JPG" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 Sebenarnya bila bertemu masalah ini ada beberapa kemungkinan :
 
@@ -30,19 +30,19 @@ Kali ini yang akan kita bahas adalah poin ke 3, "Ada setingan yang tertinggal". 
 - Buka **System Properties**, caranya klik kanan pada **My Computer** kemudian pilih **Properties**, dilanjutkan dengan memilih **Advanced system settings**
 - Pada tab **Hardware** *(1)*, pilih **Device Installation Settings** *(2)*
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2013-01-16-masalah-windows-was-unable-to-istall-your-unknown-device-2.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2013-01-16-masalah-windows-was-unable-to-istall-your-unknown-device-2.JPG" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 - Lalu pada form **Device Installation Settings**, pilih **Yes** seperti pada gambar
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2013-01-16-masalah-windows-was-unable-to-istall-your-unknown-device-3.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2013-01-16-masalah-windows-was-unable-to-istall-your-unknown-device-3.JPG" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 ------------
 

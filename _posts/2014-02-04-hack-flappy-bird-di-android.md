@@ -22,34 +22,34 @@ Terkait dengan game tersebut, dalam postingan ini ane coba kasih trik gimana car
 
  * Buka file manager, lalu masuk ke `System root/data/data/com.dotgears.flappybird/shared_prefs/`
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2014-02-04-hack-flappy-bird-di-android-1.jpg" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2014-02-04-hack-flappy-bird-di-android-1.jpg" width="300px"/>
 	</a>
-</center>
+</center></figure>
 
  * lalu buka file `FlappyBird.xml` dengan `SE TextEditor`.
  
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2014-02-04-hack-flappy-bird-di-android-2.jpg" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2014-02-04-hack-flappy-bird-di-android-2.jpg" width="300px"/>
 	</a>
-</center>
+</center></figure>
 
  * Ubah isi `value` sesuai dengan yang Anda inginkan. Contoh yang saya terapkan 2014. Setelah itu "save".
  
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2014-02-04-hack-flappy-bird-di-android-3.jpg" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2014-02-04-hack-flappy-bird-di-android-3.jpg" width="300px"/>
 	</a>
-</center>
+</center></figure>
 
  * Alhasil, restart game lalu coba sengaja terjatuh.
  
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2014-02-04-hack-flappy-bird-di-android-4.jpg" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2014-02-04-hack-flappy-bird-di-android-4.jpg" width="300px"/>
 	</a>
-</center>
+</center></figure>
 
   * Semoga berhasil.

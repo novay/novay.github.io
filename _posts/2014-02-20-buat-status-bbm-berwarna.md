@@ -11,11 +11,11 @@ share: true
 
 Bagi-bagi info vroh. Entah ini **bug** atau emang disengaja sama pihak BBM membiarkan *entities HTML*-nya kebuka lebar gini, yang jelas status BBM bisa ngenalin tag **HTML** atau mungkin sampai **CSS**. Anak web pasti pada tau. Nih buktinya vroh :
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2014-02-20-buat-status-bbm-berwarna.jpg" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2014-02-20-buat-status-bbm-berwarna.jpg" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 Langsung ke caranya yak :
 

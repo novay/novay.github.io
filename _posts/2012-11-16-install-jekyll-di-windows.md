@@ -27,37 +27,37 @@ Berterima kasihlah pada **[Madhur Ahuja](http://www.madhur.co.in/)** yang telah 
 - Buka file unduhan kemudian *extract* kedalam folder **Jekyll** yang Anda buat tadi. Jangan heran bila ukuran hasil *extract*-nya bisa mencapai 1,20 GB *(Bayangin coba kalo kamu install atu-atu)* :3
 - Sekarang buka **System Properties**, melalui **Advanced system settings**.
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2012-11-16-install-jekyll-di-windows-1.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2012-11-16-install-jekyll-di-windows-1.JPG" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 - Tekan tombol **Environtment Variables...**
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2012-11-16-install-jekyll-di-windows-2.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2012-11-16-install-jekyll-di-windows-2.JPG" width="300px"/>
 	</a>
-</center>
+</center></figure>
 
 - Perhatikan tabel **System Variables** *(1)*, pada variabel **Path** *(2)* tekan **Edit...** *(3)*
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2012-11-16-install-jekyll-di-windows-3.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2012-11-16-install-jekyll-di-windows-3.JPG" width="300px"/>
 	</a>
-</center>
+</center></figure>
 
 - Tambahkan baris berikut dibelakang :
 	
 `C:\Jekyll\ruby\bin;C:\Jekyll\devkit\bin;C:\Jekyll\Git\bin;C:\Jekyll\Python\App;C:\Jekyll\devkit\mingw\bin;C:\Jekyll\curl\bin`
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2012-11-16-install-jekyll-di-windows-4.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2012-11-16-install-jekyll-di-windows-4.JPG" width="300px"/>
 	</a>
-</center>
+</center></figure>
 
 Depannya jangan lupa dipisah. Setiap *PATH* harus dipisahkan dengan tanda **;**
 
@@ -65,11 +65,11 @@ Depannya jangan lupa dipisah. Setiap *PATH* harus dipisahkan dengan tanda **;**
 
 - Untuk mengecek semuanya berjalan dan terinstall dengan baik, Anda dapat menggunakan cara berikut :
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2012-11-16-install-jekyll-di-windows-5.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2012-11-16-install-jekyll-di-windows-5.JPG" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 Sekarang instalasi kebutuhan paket Jekyll di Windows sudah lengkap, sekarang tersisa bagaimana nge-*build* Jekyll memanfaatkan paket-paket yang ada.
 
@@ -81,16 +81,16 @@ Sekarang instalasi kebutuhan paket Jekyll di Windows sudah lengkap, sekarang ter
 - Sekarang masuk ke direktori **coba-jekyll** dengan `cd coba-jekyll`.
 - Kemudian eksekusi `jekyll serve`.
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2012-11-16-install-jekyll-di-windows-6.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2012-11-16-install-jekyll-di-windows-6.JPG" width="500px"/>
 	</a>
-</center>
+</center></figure>
 
 - Buka browser lalu kunjungi `localhost:4000` dan **taraaam...**
 
-<center>
+<figure><center>
 	<a href="{{ site.url }}/assets/post/2012-11-16-install-jekyll-di-windows-7.JPG" target="_blank"> 
 		<img src="{{ site.url }}/assets/post/2012-11-16-install-jekyll-di-windows-7.JPG" width="500px"/>
 	</a>
-</center>
+</center></figure>
