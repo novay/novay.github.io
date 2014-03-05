@@ -42,25 +42,28 @@ Untuk aplikasi autentikasi ini kita hanya butuh :
 
 Jadi, bisa disiapkan 4 route untuk menuju ke halaman tersebut seperti berikut :
 
-	// proyek-laravel/app/routes.php
+{% highlight php %}
+// proyek-laravel/app/routes.php
 
-	<?php 
-	# Halaman Home yang nantinya berisi tombol login (localhost:8000/)
-	Route::get('/', function() {
-		return 'Halaman Home Aplikasi';
-	});
-	# Halaman login (localhost:8000/login)
-	Route::get('login', function() {
-		return 'Halaman Login';
-	});
-	# Halaman beranda yg di akses setelah login (localhost:8000/beranda) 
-	Route::get('beranda', array('before' => 'auth', function() {
-		return 'Halaman Beranda';
-	}));
-	# Halaman logout (localhost:8000/user/logout) 
-	Route::get('user/logout', array('before' => 'auth', function() {
-		return 'Halaman Beranda';
-	}));
+<?php 
+# Halaman Home yang nantinya berisi tombol login (localhost:8000/)
+Route::get('/', function() {
+	return 'Halaman Home Aplikasi';
+});
+# Halaman login (localhost:8000/login)
+Route::get('login', function() {
+	return 'Halaman Login';
+});
+# Halaman beranda yg di akses setelah login (localhost:8000/beranda) 
+Route::get('beranda', array('before' => 'auth', function() {
+	return 'Halaman Beranda';
+}));
+# Halaman logout (localhost:8000/user/logout) 
+Route::get('user/logout', array('before' => 'auth', function() {
+	return 'Halaman Beranda';
+}));
+?>
+{% endhighlight %}
 
 Sekarang kalian bisa coba akses keempat link terlebih dahulu melalui browser. Untuk route ketiga **(localhost:8000/beranda)** dan keempat **(localhost:8000/user/logout)** kita akan secara langsung di lempar ke halaman `localhost:8000/login`, kenapa? Karena terdapat `filter` didalamnya, yaitu `'before' => 'auth'` yang artinya halaman itu hanya bisa diakses oleh member atau pengguna yang telah melalui proses login.
 
@@ -68,16 +71,18 @@ Semoga kalian dapat gambaran tentang fungsi route walaupun cuma sedikit disini.
 
 - Bila sudah, sekarang kita fokus ke Route pertama, ubah jadi seperti berikut :
 
-	// proyek-laravel/app/routes.php
+{% highlight php %}
+// proyek-laravel/app/routes.php
 
-	<?php 
-	# Halaman Home yang nantinya berisi tombol login (localhost:8000/)
-	Route::get('/', array('as' => 'index', 'uses' => 'AuthController@getIndex'));
-	
-	# Halam...
-	Route::get('login', function() {
-		....
-	?>
+<?php 
+# Halaman Home yang nantinya berisi tombol login (localhost:8000/)
+Route::get('/', array('as' => 'index', 'uses' => 'AuthController@getIndex'));
+
+# Halam...
+Route::get('login', function() {
+	....
+?>
+{% endhighlight %}
 
 Terdapat perubahan **function()** menjadi **array** disini, dan perhatikan sekarang kita memiliki 2 nilai dalam route :
 
@@ -91,41 +96,47 @@ Anda menggunakan **uses** berarti Anda menerima untuk menyerahkan tugas dari **r
 
 - Untuk route kedua, ubah jadi seperti berikut :
 
-	...
-	# Hala...
-	Route::get('/', array(...
+{% highlight php %}
+...
+# Hala...
+Route::get('/', array(...
 
-	# Halaman login (localhost:8000/login)
-	Route::get('login', array('as' => 'masuk', 'uses' => 'AuthController@getMasuk'));
+# Halaman login (localhost:8000/login)
+Route::get('login', array('as' => 'masuk', 'uses' => 'AuthController@getMasuk'));
 
-	# Hala...
-	Route::get('beranda', array(...
-	...
+# Hala...
+Route::get('beranda', array(...
+...
+{% endhighlight %}
 
 Sama seperti sebelumnya, sekarang route ini memiliki 2 nilai, identitas dan pewaris. XD
 
 - Route ketiga, ubah jadi seperti berikut :
 
-	...
-	Halaman log...
-	Route::get('login...);
+{% highlight php %}
+...
+Halaman log...
+Route::get('login...);
 
-	# Halaman beranda yg di akses setelah login (localhost:8000/beranda) 
-	Route::get('beranda', array('before' => 'auth', 'as' => 'admin', 'uses' => 'AuthController@getAdmin'));
+# Halaman beranda yg di akses setelah login (localhost:8000/beranda) 
+Route::get('beranda', array('before' => 'auth', 'as' => 'admin', 'uses' => 'AuthController@getAdmin'));
 
-	# Halaman logout...
-	Route::get('user/logout...
-	...
+# Halaman logout...
+Route::get('user/logout...
+...
+{% endhighlight %}
 
 - Dan untuk route terakhir, ubah jadi seperti berikut :
 
-	...
-	# Halaman berand...
-	Route::get('beranda', ar...
+{% highlight php %}
+...
+# Halaman berand...
+Route::get('beranda', ar...
 
-	# Halaman logout (localhost:8000/user/logout) 
-	Route::get('user/logout', array('before' => 'auth', 'as' => 'keluar', 'uses' => 'AuthController@getKeluar'));
-	...
+# Halaman logout (localhost:8000/user/logout) 
+Route::get('user/logout', array('before' => 'auth', 'as' => 'keluar', 'uses' => 'AuthController@getKeluar'));
+...
+{% endhighlight %}
 
 **OKE**, sekarang urusan si **route** sudah selesai dan semua tanggung jawabnya telah dilimpahkan ke **Controller**.
 
