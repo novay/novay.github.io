@@ -88,7 +88,7 @@ Terdapat perubahan **function()** menjadi **array** disini, dan perhatikan sekar
 
 ####**as** bernilai **index**
 
-**as** disini berfungsi sebagai identitas si `route` itu sendiri. Sedikit bocoran, biasanya identitas ini digunakan pada sesi **Views** dengan cara `{{ route('index') }}` atau {{ URL::route('index') }} atau pada sesi **Controller**dengan cara `return Redirect::route('index');`. Tenang, nanti kalian akan paham sendiri kok. XD
+**as** disini berfungsi sebagai identitas si `route` itu sendiri. Sedikit bocoran, biasanya identitas ini digunakan pada sesi **Views** dengan cara `route('index')` atau `URL::route('index')` atau pada sesi **Controller**dengan cara `return Redirect::route('index');`. Tenang, nanti kalian akan paham sendiri kok. XD
 
 ####**uses** bernilai **AuthController@getIndex**
 
