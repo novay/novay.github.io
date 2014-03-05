@@ -12,6 +12,7 @@ share: true
 Ini merupakan lanjutan dari panduan sebelumnya, apabila Anda belum membacanya silahkan kunjungi [Bagian 1]({{site.url}}/blog/2013/04/03/membuat-autentikasi-login-laravel-bagian-1/)...
 
 Dari hasil percobaan sebelumnya, kita telah memiliki :
+
 - Database, menggunakan SQLITE
 - Tabel, berkat *migrations*
 - Pengguna, berkat *seeding*
@@ -28,7 +29,7 @@ Tips : Biasanya kalau saya pribadi, pembuatan model disini menyesuaikan banyakny
 
 ### Routes
 
-Route disini bertujuan...
+Secara garis besar, **Route** disini bertujuan untuk menangani peng-ALAMATAN atau URL website kita.
 
 ### Controllers
 
