@@ -41,22 +41,22 @@ Untuk aplikasi autentikasi ini kita hanya butuh :
 
 Jadi, bisa disiapkan 2 route untuk menuju ke halaman tersebut seperti berikut :
 
-// proyek-laravel/app/routes.php
+	// proyek-laravel/app/routes.php
 
-<?php 
-# Halaman Home berisi tombol login (localhost:8000/)
-Route::get('/', function() {
-	return 'Halaman Home Aplikasi';
-});
-# Halaman login (localhost:8000/login)
-Route::get('login', function() {
-	return 'Halaman Login';
-});
-# Halaman beranda yg di akses setelah login (localhost:8000/beranda) 
-Route::get('beranda', array('before' => 'auth', function() {
-	return 'Halaman Beranda';
-}));
-?>
+	<?php 
+	# Halaman Home berisi tombol login (localhost:8000/)
+	Route::get('/', function() {
+		return 'Halaman Home Aplikasi';
+	});
+	# Halaman login (localhost:8000/login)
+	Route::get('login', function() {
+		return 'Halaman Login';
+	});
+	# Halaman beranda yg di akses setelah login (localhost:8000/beranda) 
+	Route::get('beranda', array('before' => 'auth', function() {
+		return 'Halaman Beranda';
+	}));
+	?>
 
 Sekarang kalian bisa ...
 
