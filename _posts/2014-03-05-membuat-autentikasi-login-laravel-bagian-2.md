@@ -29,7 +29,36 @@ Tips : Biasanya kalau saya pribadi, pembuatan model disini menyesuaikan banyakny
 
 ### Routes
 
-Secara garis besar, **Route** disini bertujuan untuk menangani peng-ALAMATAN atau URL website kita.
+Secara garis besar, **Route** disini bertujuan untuk menangani peng-ALAMATAN atau URL website kita. Sekarang saatnya kita berkhayal. Kira-kira ada berapa halaman yang akan kita gunakan untuk aplikasi kita. 
+
+Routes di laravel bernama `routes.php` berada di `proyek-aplikasi/app/routes.php`.
+
+Untuk aplikasi autentikasi ini kita hanya butuh :
+
+- Halaman Home **(localhost:8000/)**
+- Halaman Login **(localhost:8000/login)**
+- Halaman Beranda yang akan diakses setelah pengguna login **(localhost:8000/beranda)**
+
+Jadi, bisa disiapkan 2 route untuk menuju ke halaman tersebut seperti berikut :
+
+// proyek-laravel/app/routes.php
+
+<?php 
+# Halaman Home berisi tombol login (localhost:8000/)
+Route::get('/', function() {
+	return 'Halaman Home Aplikasi';
+});
+# Halaman login (localhost:8000/login)
+Route::get('login', function() {
+	return 'Halaman Login';
+});
+# Halaman beranda yg di akses setelah login (localhost:8000/beranda) 
+Route::get('beranda', array('before' => 'auth', function() {
+	return 'Halaman Beranda';
+}));
+?>
+
+Sekarang kalian bisa ...
 
 ### Controllers
 
