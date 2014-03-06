@@ -305,7 +305,7 @@ Jadi ketika getKeluar() ini dikunjungi, dia akan menghapus *session* dan *cookie
 
 Untuk **POST** sengaja saya buat belakangan karena bagian ini akan menampung baris yang lebih banyak dari sebelumnya. Kalau dulu saya pribadi sih biasanya saya buat dulu alur programnya, jadi istilahnya kita ngomong ke postMasuk() ini dengan menggunakan bahasa kita lewat komentar seperti berikut :
 
-{% highlight php %
+{% highlight php %}
 <?php
 	...
 	# route('masuk') | localhost:8000/login
@@ -349,7 +349,7 @@ Baca dulu baik-baik tiap komentar, bila menurut kalian semua masuk akal, baru yu
 
 Sekarang isi menjadi seperti berikut :
 
-{% highlight php %
+{% highlight php %}
 <?php
 	...
 	# route('masuk') | localhost:8000/login
