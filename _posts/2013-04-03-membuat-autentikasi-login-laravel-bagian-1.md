@@ -28,17 +28,18 @@ Harapan saya dalam panduan kali ini, setelahnya kalian akan mengetahui:
 - Berinteraksi dengan *models*, *routes*, *controllers*, dan *views* dalam pembuatan tampilan beserta prosesnya.
 - Menangani kesalahan yang sering terjadi ketika kita login
 - Bagaimana menggunakan *Eloquent ORM* untuk mem-validasi pengguna
+- Berkenalan dengan **blade**
 
 Saya asumsikan bahwa kalian sudah pernah melakukan [instalasi Laravel]() sebelumnya. Jadi sekarang kita akan langsung fokus dalam pembuatan database. 
 
 Perhatikan dialog antara dua bocah berikut :
 
-Mayu = Database di sistem ini gunanya untuk apa ya? 
-Miku = Mari berkhayal, kira-kira yang akan di autentikasi itu apa? 
-Mayu = *username* dan *password*
-Miku = Oke, sekarang bagaimana agar proses autentikasi itu bisa dilakukan?
-Mayu = *lakukan proses pencocokan dengan "data yang sudah ada"*. 
-Miku = Itu artinya kita butuh *data yang sudah ada* yang selanjutnya akan kita tampung kedalam wadah yang namanya database. 
+- Mayu = Database di sistem ini gunanya untuk apa ya? 
+- Miku = Mari berkhayal, kira-kira yang akan di autentikasi itu apa? 
+- Mayu = *username* dan *password*
+- Miku = Oke, sekarang bagaimana agar proses autentikasi itu bisa dilakukan?
+- Mayu = *lakukan proses pencocokan dengan "data yang sudah ada"*. 
+- Miku = Itu artinya kita butuh *data yang sudah ada* yang selanjutnya akan kita tampung kedalam wadah yang namanya database. 
 
 Bisa dipahami? Kalau belum baca ulang dialognya.
 
@@ -195,4 +196,4 @@ File **Seeder** telah berhasil dibuat. Dan langkah tersisa hanya tinggal menumpa
 
 `php artisan db:seed`
 
-Untuk tahap pembuatan Aplikasi, kita lanjut ke [bagian ke 2](). 
+Untuk tahap pembuatan Aplikasi, kita lanjut ke [bagian ke 2]({{site.url}}//blog/2013/03/05/membuat-autentikasi-login-laravel-bagian-2/). 
