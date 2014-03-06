@@ -506,7 +506,7 @@ Secara kasat mata, kita tidak akan menyadari bila didalamnya terdapat syntax PHP
 Yang ingin saya katakan disini adalah ini merupakan kemampuan dari si `blade` milik laravel. Bila kita kumpulkan hal-hal unik tersebut maka jadi seperti berikut :
 
 - `@if(...) ... @endif` intinya disini berbicara masalah `kondisional if...else...`.
-- `{{ ... }}` bernilai sama dengan `<?php ... ?>`
+- `{ { ... } }` bernilai sama dengan `<?php ... ?>`
 - `@yield` akan dijadikan tempat menampung isi dari view-view lain.
 
 Catatan : Perhatikan baik-baik. Ketiga hal aneh tersebut tidak akan bisa terbaca oleh laravel tanpa ada **.blade**. Intinya terletak pada penamaan file *View*. `index.php` tidak akan mengenalinya, sedangkan `index.blade.php` lah yang bisa. Itulah salah satu alasan kita membutuhkan `.blade` dibelakangnya.
