@@ -476,27 +476,27 @@ Akan dijadikan fondasi dasar kerangka website Anda. Tenang aja, nanti kalian bak
 Sekarang isi seperti berikut :
 
 {% highlight html %}
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Autentikasi Sistem Sederhana</title>
-	</head>
-	<body>
-		<h2>Autentikasi Sederhana Menggunakan Laravel</h2>
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Autentikasi Sistem Sederhana</title>
+		</head>
+		<body>
+			<h2>Autentikasi Sederhana Menggunakan Laravel</h2>
 
-		<!-- Sediakan wadah untuk menampung session 'pesan', 
-		ingat ketika controller pernah mengirim session
-		melalui variabel 'pesan'? Kalau lupa coba cek ulang -->
-		@if(Session::has('pesan'))
-			<p>{{ Session::get('pesan') }}</p>
-		@endif
+			<!-- Sediakan wadah untuk menampung session 'pesan', 
+			ingat ketika controller pernah mengirim session
+			melalui variabel 'pesan'? Kalau lupa coba cek ulang -->
+			@if(Session::has('pesan'))
+				<p>{{ Session::get('pesan') }}</p>
+			@endif
 
-		<!-- Disinilah nantinya yang akan kita isi 
-		untuk setiap view utama -->
-		@yield('konten')
+			<!-- Disinilah nantinya yang akan kita isi 
+			untuk setiap view utama -->
+			@yield('konten')
 
-	</body>
-</html>
+		</body>
+	</html>
 {% endhighlight %}
 
 Seperti yang kalian lihat, Yap, mereka adalah sekumpulan syntax HTML. Tapi bila diperhatikan ada yang unik didalamnya. 
@@ -513,21 +513,21 @@ Catatan : Perhatikan baik-baik. Ketiga hal aneh tersebut tidak akan bisa terbaca
 
 ####Untuk `admin/index.blade.php`
 
-Merupakan Halaman yang akan diakses ketika pengguna telah melakukan login, isi seeperti berikut :
+Merupakan Halaman yang akan diakses ketika pengguna telah melakukan login, isi seperti berikut :
 
 {% highlight html %}
-<!-- Kita jadikan sebagai tema,
-file 'utama.blade.php' dalam foldder '_tema' -->
-@extends('_tema.utama')
+	<!-- Kita jadikan sebagai tema,
+	file 'utama.blade.php' dalam foldder '_tema' -->
+	@extends('_tema.utama')
 
-<!-- Ingat dengann @yield('konten')?...
-Inilah yang akan diselipkan disana -->
-@section('konten')
-<!-- Ingat, '{{ ... }}' equivalen dengan '<?php ?>', 
-Auth::user()->username akan menarik isi dari database pengguna,
-lebih tepatnya isi field 'username' pengguna yang sedang login -->
-<p>Selamat Datang, {{ Auth::user()->nama_tampilan }} ({{ Auth::user()->email }})</p>
-@stop
+	<!-- Ingat dengann @yield('konten')?...
+	Inilah yang akan diselipkan disana -->
+	@section('konten')
+	<!-- Ingat, '{{ ... }}' equivalen dengan '<?php ?>', 
+	Auth::user()->username akan menarik isi dari database pengguna,
+	lebih tepatnya isi field 'username' pengguna yang sedang login -->
+	<p>Selamat Datang, {{ Auth::user()->nama_tampilan }} ({{ Auth::user()->email }})</p>
+	@stop
 {% endhighlight %}
 
 Penjelasan ada dimasing-masing komentar. Dibaca baik-baik yak, sampe paham baru dilanjut.
@@ -537,13 +537,13 @@ Penjelasan ada dimasing-masing komentar. Dibaca baik-baik yak, sampe paham baru 
 Didalamnya hanya akan terdapat tombol login yang akan mengarah kehalaman login, jadi isi seperti berikut :
 
 {% highlight html %}
-@extends('_tema.utama')
+	@extends('_tema.utama')
 
-@section('konten')
-<!-- Ingat, '{{ ... }}' equivalen dengan '<?php ?>' 
-'route('login')' mengarah ke identitas di route -->
-<a href="{{ route('masuk') }}">Login Sebagai Admin</a>
-@stop
+	@section('konten')
+	<!-- Ingat, '{{ ... }}' equivalen dengan '<?php ?>' 
+	'route('login')' mengarah ke identitas di route -->
+	<a href="{{ route('masuk') }}">Login Sebagai Admin</a>
+	@stop
 {% endhighlight %}
 
 ####Untuk `login.blade.php`
@@ -551,24 +551,24 @@ Didalamnya hanya akan terdapat tombol login yang akan mengarah kehalaman login, 
 Halaman ini akan menampilkan form yang akan kita inputan, isi script berikut :
 
 {% highlight html %}
-@extends('_tema.utama')
+	@extends('_tema.utama')
 
-@section('konten')
-<!-- Kita gunakan identitas route berikut -->
-{{ Form::open(array('route' => 'post-masuk')) }}
-	
-	<!-- Label dan Textfield dengan id 'username' -->
-	{{ Form::label('username', 'Username') }}
-	{{ Form::text('username') }}
+	@section('konten')
+	<!-- Kita gunakan identitas route berikut -->
+	{{ Form::open(array('route' => 'post-masuk')) }}
+		
+		<!-- Label dan Textfield dengan id 'username' -->
+		{{ Form::label('username', 'Username') }}
+		{{ Form::text('username') }}
 
-	<!-- Label dan Passwordfield dengan id 'password' -->
-	{{ Form::label('password', 'Password') }}
-	{{ Form::password('password') }}
+		<!-- Label dan Passwordfield dengan id 'password' -->
+		{{ Form::label('password', 'Password') }}
+		{{ Form::password('password') }}
 
-	<!-- Tombol Masuk -->
-	{{ Form::submit('Masuk') }}
-{{ Form::close() }}
-@stop
+		<!-- Tombol Masuk -->
+		{{ Form::submit('Masuk') }}
+	{{ Form::close() }}
+	@stop
 {% endhighlight %}
 
 
@@ -579,7 +579,7 @@ Ya, sebenarnya tutorial ini dikhususkan buat mereka yang betul-betul buta tentan
 
 Oleh karenanya sangat wajar bila programmer *pro* bilang kalau tulisan ini terlalu lebay, ngahaha... Intinya pesan dari saya tersampaikan dengan baik. Dan mereka bisa memahami fungsi dari beberapa yang dijelaskan diatas.
 
-Ingat, semua programmer memiliki ciri khas mereka masing-masing, jadi wajar bila tata penulisan syntax atau bahkan urutan dalam pembuatannya berbeda antara satu dan lainnya. Dan ini mengingatkan saya tentang semboyan *Bhenika Tunggal Ika* XD. Walaupun memiliki cara dan urutan yang berbeda, namun memiliki satu tujuan. Ngahahaha...
+Ingat, semua programmer memiliki ciri khas mereka masing-masing, jadi wajar bila tata penulisan syntax atau bahkan urutan dalam pembuatannya berbeda antara satu dengan lainnya. Dan ini mengingatkan saya tentang semboyan *Bhineka Tunggal Ika* XD. Meski memiliki cara dan urutan yang berbeda-beda, namun memiliki satu tujuan jua. Ngahahaha...
 
 Akhir kata, 
 Happy Coding dan Salam Olahraga.
