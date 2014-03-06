@@ -86,13 +86,13 @@ Route::get('login', function() {
 
 Terdapat perubahan **function()** menjadi **array** disini, dan perhatikan sekarang kita memiliki 2 nilai dalam route :
 
-####**as** bernilai **index**
+####1. **as** bernilai **index**
 
-**as** disini berfungsi sebagai identitas si `route` itu sendiri. Sedikit bocoran, biasanya identitas ini digunakan pada sesi **Views** dengan cara `route('index')` atau `URL::route('index')` atau pada sesi **Controller**dengan cara `return Redirect::route('index');`. Tenang, nanti kalian akan paham sendiri kok. XD
+**as** disini berfungsi sebagai **identitas** si `route` itu sendiri. Sedikit bocoran, biasanya identitas ini digunakan pada sesi **Views** dengan cara `route('index')` atau `URL::route('index')` atau pada sesi **Controller**dengan cara `return Redirect::route('index');`. Tenang, nanti kalian akan paham sendiri kok. XD
 
-####**uses** bernilai **AuthController@getIndex**
+####2. **uses** bernilai **AuthController@getIndex**
 
-Anda menggunakan **uses** berarti Anda menerima untuk menyerahkan tugas dari **route** menuju **Controllers**. Sesuai arti **uses** artinya menggunakan. Jadi gampangnya bahasanya begini, **Route** ini menggunakan **Controller** bernama **AuthController** dengan method bernama **getIndex** untuk selanjutnya menjalankan tugasnya.
+Anda menggunakan **uses** berarti Anda menerima untuk menyerahkan tugas dari **route** kepada **Controllers**. Sesuai arti **uses** artinya menggunakan. Jadi bahasa gampangnya begini, **Route** ini memerintahkan **Controller** bernama **AuthController** dengan method bernama **getIndex** untuk selanjutnya menjalankan tugasnya.
 
 - Untuk route kedua, ubah jadi seperti berikut :
 
@@ -141,9 +141,9 @@ Route::get('user/logout', array('before' => 'auth', 'as' => 'keluar', 'uses' => 
 ?>
 {% endhighlight %}
 
-Masih tetap di `route`. Sekarang coba pikir, pada halaman login terdapat 2 buat text field. Berarti kita membutuhkan 1 route **POST** untuk menangani inputan tersebut yang berupa `username` dan `password`.
+Masih tetap di `route`. Sekarang coba pikir, kita kemanakan inputan kita saat login?. Untuk itu, berarti kita membutuhkan 1 buah route **POST** untuk menangani inputan tersebut yang berupa `username` dan `password`.
 
-Jadi, yang harus Anda lakukan sekarang adalah menambahkan 1 buat route dengan HTTP request **POST** seperti berikut :
+Jadi, yang harus Anda lakukan sekarang adalah menambahkan 1 buah route dengan HTTPRequest **POST** seperti berikut :
 
 {% highlight php %}
 <?php
@@ -165,8 +165,8 @@ Route::get('beranda', array...
 
 **Controllers** disini akan kita gunakan sebagai wadah kita mengelola semua logika program. Dari beberapa hal yang telah kita lakukan sebelumnya, dapat kita simpulkan bahwa saat ini kita harus memiliki sebuah Controller bernama `AuthController` bila disesuaikan dengan apa yang kita tulis didalam `route` program. Dan bila kita kumpulkan hasilnya adalah seperti berikut :
 
-- 1 **Controller** = `AuthController`
-- 5 **Method** = `getIndex`, `getMasuk`, `postMasuk`, `getAdmin`, `getKeluar`
+- **1 Controller** = `AuthController`
+- **5 Method** = `getIndex`, `getMasuk`, `postMasuk`, `getAdmin`, `getKeluar`
 
 Sekarang buat file baru dalam `proyek-laravel/app/controllers/*` lalu beri nama `AuthController.php`. Dan isikan syntax berikut :
 
@@ -299,7 +299,7 @@ Mudahnya direktorinya jadi seperti ini : `proyek-laravel/app/views/admin/index.b
 ?>
 {% endhighlight %}
 
-Jadi ketika getKeluar() ini dikunjungi, dia akan menghapus *session* dan *cookie* pengguna yang membuat pengguna keluar dari sistem. Lalu menampilkan view 'index.blade.php' dengan session bernama 'pesan' untuk ditampilkan di `index` sesaat setelah melakukan `logout`.
+Jadi ketika getKeluar() ini dikunjungi, dia akan menghapus *session* dan *cookie* pengguna yang membuat pengguna keluar dari sistem. Lalu menampilkan view `index.blade.php` dengan session bernama 'pesan' untuk ditampilkan di `index` sesaat setelah melakukan `logout`.
 
 ####Untuk postMasuk()
 
@@ -434,7 +434,7 @@ Dan dengan ini, tugas si **Controllers** berakhir, sebelumnya juga **route** sud
 
 Sebelumnya saya sempat beberapa kali menyinggung masalah view dan akan saya tekankan sekali lagi disini, tujuan utama si **Views** disini adalah untuk menampilkan halaman. Pemegang tugas akhir laravel yang menampilkannya kedalam bentuk visual untuk penggunanya.
 
-Bila dikumpulkan, sekarang kita harus memiliki 3 buah view yang harus kita buat, dan mereka adalah :
+Bila kita memeriksa ulang Controller kita, maka akan terkumpul 3 buah view yang harus kita buat, dan mereka adalah :
 
 - index
 - login
@@ -442,13 +442,25 @@ Bila dikumpulkan, sekarang kita harus memiliki 3 buah view yang harus kita buat,
 
 Sekarang masuk ke direktori `proyek-laravel/app/views/` dan buat semua view yang dibutuhkan, kurang lebih seperti gambar berikut :
 
-GAMBAR VIEW
+<figure>
+	<center>
+		<a href="{{ site.url }}/assets/post/2014-03-05-membuat-autentikasi-login-laravel-bagian-2-1.JPG" target="_blank"> 
+			<img src="{{ site.url }}/assets/post/2014-03-05-membuat-autentikasi-login-laravel-bagian-2-1.JPG" width="500px"/>
+		</a>
+	</center>
+</figure>
 
 Mumpung masih disini saya juga akan mengenalkan kalian dengan fitur **blade** milik laravel untuk keperluan templating.
 
 Sekarang tambahkan 1 buat view lagi bernama `utama.blade.php` lalu letakkan dalam folder `_tema` di direktori *Views*. Ya, kurang lebih Views kalian jadi seperti ini :
 
-GAMBAR VIEW 2
+<figure>
+	<center>
+		<a href="{{ site.url }}/assets/post/2014-03-05-membuat-autentikasi-login-laravel-bagian-2-2.JPG" target="_blank"> 
+			<img src="{{ site.url }}/assets/post/2014-03-05-membuat-autentikasi-login-laravel-bagian-2-2.JPG" width="500px"/>
+		</a>
+	</center>
+</figure>
 
 Artinya sekarang kita memiliki 4 buah view :
 
