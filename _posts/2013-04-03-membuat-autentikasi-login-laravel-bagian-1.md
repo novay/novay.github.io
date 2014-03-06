@@ -158,7 +158,7 @@ class SeederTabelPengguna extends Seeder
 				'email'			=> 'novay@otaku.si',
 				'created_at' 	=> new DateTime,
 				'updated_at' 	=> new DateTime
-			));
+		));
 
 		DB::table('pengguna')->insert($tampungan);
 	}
@@ -200,4 +200,4 @@ File **Seeder** telah berhasil dibuat. Dan langkah tersisa hanya tinggal menumpa
 
 `php artisan db:seed`
 
-Untuk tahap pembuatan Aplikasi, kita lanjut ke [bagian ke 2]({{site.url}}/blog/2013/03/05/membuat-autentikasi-login-laravel-bagian-2/). 
+Untuk tahap pembuatan Aplikasi, kita lanjut ke [bagian ke 2]({{site.url}}/blog/2014/03/05/membuat-autentikasi-login-laravel-bagian-2/). 
