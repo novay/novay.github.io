@@ -514,7 +514,7 @@ Inilah yang akan diselipkan disana -->
 <!-- Ingat, '{{ ... }}' equivalen dengan '<?php ?>', 
 Auth::user()->username akan menarik isi dari database pengguna,
 lebih tepatnya isi field 'username' pengguna yang sedang login -->
-<p>Selamat Datang, {{ Auth::user()->username }}</p>
+<p>Selamat Datang, {{ Auth::user()->nama_tampilan }} ({{ Auth::user()->email }})</p>
 @stop
 {% endhighlight %}
 
