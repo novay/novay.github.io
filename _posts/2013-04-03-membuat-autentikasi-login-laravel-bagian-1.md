@@ -71,11 +71,11 @@ Ringkasnya, *migrations* disini merupakan sebuah cara dimana kita bisa memanipul
 
 Laravel memungkinkan Anda untuk menciptakan sebuah file *migration* dengan hanya menggunakan perintah **artisan**. Caranya cukup mudah, buka **CMD** lalu masuk ke direktori proyek dan kemudian eksekusi perintah berikut :
 
-`php artisan migrate:make buat_tabel_pengguna ––table=pengguna ––create`
+`php artisan migrate:make buat_tabel_pengguna --table=pengguna --create`
 
 - `migrate:make` merupakan satu paket perintah untuk menciptakan file *migration*.
 - `buat_tabel_pengguna` akan menjadi bagian dari nama file yang diciptakan *####_##_##_######_buat_tabel_pengguna.php*. Simbol # menggantikan angka pada waktu sekarang berurutan seperti ini : `Tahun_Bulan_Tanggal_JamMenitDetik`. Semoga paham XD.
-- `--table=pengguna --create`, sebenarnya ini sifatnya *optional*, bisa digunakan bisa tidak, perintah ini akan sedikit mempengaruhi isi file *migration* dengan fungsi *Blueprint*, sehingga menjadikan file tersebut siap pakai, dalam arti file yang diciptakan telah menyebut nama tabel sekaligus mengisinya dengan beberapa `field`. 
+- `--table=pengguna --create`, sebenarnya ini sifatnya *optional*, bisa digunakan bisa tidak, perintah ini akan sedikit mempengaruhi isi file *migration* dengan fungsi *Blueprint*. 
 
 Secara keseluruhan perintah tersebut secara otomatis akan menghasilkan sebuah file ke dalam folder `app/database/migrations` dengan nama *####_##_##_######_buat_tabel_pengguna.php*. Sekarang buka file yang dihasilkan tersebut lalu tambahkan beberapa baris syntax menjadi seperti berikut :
 
@@ -98,12 +98,8 @@ class BuatTabelPengguna extends Migration {
 		Schema::create('pengguna', function(Blueprint $table)
 		{
 			$table->increments('id');
-
-			$table->string('nama_tampilan', 50);
 			$table->string('username', 50);
 			$table->string('password', 50);
-			$table->string('email', 50);
-
 			$table->timestamps();
 		});
 	}
@@ -126,7 +122,7 @@ Sekarang file *migration* ini memiliki tanggung jawab untuk menciptakan tabel be
 
 `php artisan migrate`
 
-Dengan perintah tersebut, laravel akan meng-instalasi tabel *migration* sekaligus meng-eksekusi fungsi `up()` pada file *migration* tersebut. Dan itu artinya secara otomatis sekarang Anda memiliki 2 tabel. Tapi kita hanya fokuskan ke tabel bernama "pengguna" yang berisi kolom-kolom seperti `id`, `nama_tampilan`, dan seterusnya.
+Dengan perintah tersebut, laravel akan meng-instalasi tabel *migration* sekaligus meng-eksekusi fungsi `up()` pada file *migration* tersebut. Dan itu artinya secara otomatis sekarang Anda memiliki 2 tabel. Tapi kita hanya fokuskan ke tabel bernama "pengguna" yang berisi kolom-kolom seperti `id`, `username`, dan seterusnya.
 
 ""
 Fungsi `down()`: Untuk menghapus tabel yang ada berdasarkan nama tabel. 
@@ -190,10 +186,11 @@ class DatabaseSeeder extends Seeder {
 	}
 
 }
+?>
 {% endhighlight %}
 
 File **Seeder** telah berhasil dibuat. Dan langkah tersisa hanya tinggal menumpahkan *sesuatu* ini kedalam *botol* dengan cara:
 
 `php artisan db:seed`
 
-Untuk tahap pembuatan Aplikasi, kita lanjut ke [bagian ke 2]({{site.url}}//blog/2013/03/05/membuat-autentikasi-login-laravel-bagian-2/). 
+Untuk tahap pembuatan Aplikasi, kita lanjut ke [bagian ke 2]({{site.url}}/blog/2013/03/05/membuat-autentikasi-login-laravel-bagian-2/). 
