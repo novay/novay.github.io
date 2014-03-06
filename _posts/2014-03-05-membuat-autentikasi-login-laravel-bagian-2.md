@@ -445,7 +445,7 @@ Sekarang masuk ke direktori `proyek-laravel/app/views/` dan buat semua view yang
 <figure>
 	<center>
 		<a href="{{ site.url }}/assets/post/2014-03-05-membuat-autentikasi-login-laravel-bagian-2-1.JPG" target="_blank"> 
-			<img src="{{ site.url }}/assets/post/2014-03-05-membuat-autentikasi-login-laravel-bagian-2-1.JPG" width="500px"/>
+			<img src="{{ site.url }}/assets/post/2014-03-05-membuat-autentikasi-login-laravel-bagian-2-1.JPG" width="300px"/>
 		</a>
 	</center>
 </figure>
@@ -457,7 +457,7 @@ Sekarang tambahkan 1 buat view lagi bernama `utama.blade.php` lalu letakkan dala
 <figure>
 	<center>
 		<a href="{{ site.url }}/assets/post/2014-03-05-membuat-autentikasi-login-laravel-bagian-2-2.JPG" target="_blank"> 
-			<img src="{{ site.url }}/assets/post/2014-03-05-membuat-autentikasi-login-laravel-bagian-2-2.JPG" width="500px"/>
+			<img src="{{ site.url }}/assets/post/2014-03-05-membuat-autentikasi-login-laravel-bagian-2-2.JPG" width="300px"/>
 		</a>
 	</center>
 </figure>
