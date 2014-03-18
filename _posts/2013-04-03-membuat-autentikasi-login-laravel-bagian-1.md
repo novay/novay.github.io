@@ -13,6 +13,16 @@ Sekarang saya akan mencoba membuat halaman **login** sederhana seperti yang bias
 
 Seperti misalnya **Facebook**. Itu loh, yang masukin `username` sama `password`.
 
+Untuk gambaran, saya kasihkan demo aplikasi berupa gif ketika proyek tutorial jadi :
+
+<figure>
+	<center>
+		<a href="{{ site.url }}/assets/post/2013-04-03-membuat-autentikasi-login-laravel-bagian-1.gif" target="_blank"> 
+			<img src="{{ site.url }}/assets/post/2013-04-03-membuat-autentikasi-login-laravel-bagian-1.gif" width="300px"/>
+		</a>
+	</center>
+</figure>
+
 Sebelum memulainya ada beberapa hal yang perlu Anda ketahui:
 
 - Saya menggunakan **Windows 8**
