@@ -13,7 +13,7 @@ Sekarang saya akan mencoba membuat halaman **login** sederhana seperti yang bias
 
 Seperti misalnya **Facebook**. Itu loh, yang masukin `username` sama `password`.
 
-Untuk gambaran, saya kasihkan demo aplikasi berupa gif ketika proyek tutorial jadi :
+Untuk gambaran, saya berikan demo aplikasi berupa gif ketika proyek tutorial ini jadi :
 
 <figure>
 	<center>
@@ -22,6 +22,8 @@ Untuk gambaran, saya kasihkan demo aplikasi berupa gif ketika proyek tutorial ja
 		</a>
 	</center>
 </figure>
+
+Juga buat yang ingin langsung oprek *source code*-nya bisa download di [GITHUB](https://github.com/novay/autentikasi-login-laravel)
 
 Sebelum memulainya ada beberapa hal yang perlu Anda ketahui:
 

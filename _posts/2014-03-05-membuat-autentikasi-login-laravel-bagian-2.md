@@ -605,4 +605,4 @@ Wassalam.
 
 ##Proyek Jadi di GITHUB
 
-[Kunjungi dan Download]()
+[Kunjungi dan Download](https://github.com/novay/autentikasi-login-laravel)
