@@ -292,8 +292,8 @@ Mudahnya direktorinya jadi seperti ini : `proyek-laravel/app/views/admin/index.b
 	public function getKeluar() {
 		# Hapus session dan cookies admin
 		Auth::logout();
-		# Arahkan ke view 'index' dengan session 'pesan'.
-		return View::make('index')->withPesan('Anda telah keluar dari sistem.');
+		# Arahkan ke route 'index' dengan session 'pesan'.
+		return Redirect::route('index')->withPesan('Anda telah keluar dari sistem.');
 	}	
 }
 ?>
@@ -392,8 +392,8 @@ Sekarang isi menjadi seperti berikut :
 			
 			# Tarik masing-masing inputan yang berasal dari Form
 			
-			$pengguna 	= Input::get('username');
-			$sandi 		= Input::get('password');
+			$username 	= Input::get('username');
+			$password	= Input::get('password');
 			/* Jadikan sati untuk keperluan verifikasi */
 			$verifikasi = compact('username', 'password');
 			
@@ -486,13 +486,12 @@ Sekarang isi seperti berikut :
 
 		<!-- Sediakan wadah untuk menampung session 'pesan', 
 		ingat ketika controller pernah mengirim session
-		melalui variabel 'pesan'? Kalau lupa coba cek ulang -->
+		melalui variabel 'pesan' melalui 'withPesan();'? Kalau lupa coba cek ulang -->
 		@if(Session::has('pesan'))
 			<p>{ { Session::get('pesan') } }</p>
 		@endif
 
-		<!-- Disinilah nantinya yang akan kita isi 
-		untuk setiap view utama -->
+		<!-- Disinilah nantinya yang akan kita isi untuk setiap view utama -->
 		@yield('konten')
 
 	</body>
@@ -516,17 +515,15 @@ Catatan : Perhatikan baik-baik. Ketiga hal aneh tersebut tidak akan bisa terbaca
 Merupakan Halaman yang akan diakses ketika pengguna telah melakukan login, isi seperti berikut :
 
 {% highlight html %}
-<!-- Kita jadikan sebagai tema,
-file 'utama.blade.php' dalam foldder '_tema' -->
-@extends('_tema.utama')
+@extends('_tema.utama') <!-- Kita jadikan sebagai tema, file 'utama.blade.php' dalam foldder '_tema' -->
 
-<!-- Ingat dengann @yield('konten')?...
-Inilah yang akan diselipkan disana -->
-@section('konten')
-<!-- Ingat, '{{ ... }}' equivalen dengan '<?php ?>', 
-Auth::user()->username akan menarik isi dari database pengguna,
-lebih tepatnya isi field 'username' pengguna yang sedang login -->
+@section('konten') <!-- Ingat dengan yield 'konten' di 'utama.blade.php'?... Inilah yang akan diselipkan disana -->
+
+<!-- nama_tampilan dan email diambil dari field dalam tabel pengguna di database -->
 <p>Selamat Datang, { { Auth::user()->nama_tampilan } } ({ { Auth::user()->email } })</p>
+
+<!-- Sekarang Logout menggunakan route, perhatikan identitas route yang digunakan -->
+<p><a href="{ { route('keluar') } }">Keluar</a></p>
 @stop
 {% endhighlight %}
 
@@ -540,8 +537,7 @@ Didalamnya hanya akan terdapat tombol login yang akan mengarah kehalaman login, 
 @extends('_tema.utama')
 
 @section('konten')
-<!-- Ingat, '{{ ... }}' equivalen dengan '<?php ?>' 
-'route('login')' mengarah ke identitas di route -->
+<!-- Ingat, 'route('masuk')' mengarah ke identitas di route -->
 <a href="{ { route('masuk') } }">Login Sebagai Admin</a>
 @stop
 {% endhighlight %}
@@ -561,9 +557,29 @@ Halaman ini akan menampilkan form yang akan kita inputan, isi script berikut :
 	{ { Form::label('username', 'Username') } }
 	{ { Form::text('username') } }
 
+	<!-- Berikut adalah session validasi, sebuah kondisional
+		 dimana ketika variabel 'errors' dari 'withErrors() di Controller,
+		 diterima, maka tampilkan validasi yang diterima', 
+		 dalam hal ini, untuk validasi username -->
+	@if($errors->has('username'))
+		{ { $errors->first('username') } }
+	@endif
+
+	<br/>
+
 	<!-- Label dan Passwordfield dengan id 'password' -->
 	{ { Form::label('password', 'Password') } }
 	{ { Form::password('password') } }
+
+	<!-- Berikut adalah session validasi, sebuah kondisional
+		 dimana ketika variabel 'errors' dari 'withErrors() di Controller,
+		 diterima, maka tampilkan validasi yang diterima' 
+		 dalam hal ini untuk validasi password -->
+	@if($errors->has('password'))
+		{ { $errors->first('password') } }
+	@endif
+
+	<br/>
 
 	<!-- Tombol Masuk -->
 	{ { Form::submit('Masuk') } }
@@ -586,3 +602,7 @@ Ingat, semua programmer memiliki ciri khas mereka masing-masing, jadi wajar bila
 Akhir kata, 
 Happy Coding dan Salam Olahraga.
 Wassalam.
+
+##Proyek Jadi di GITHUB
+
+[Kunjungi dan Download]()
