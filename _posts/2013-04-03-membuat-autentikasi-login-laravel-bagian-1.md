@@ -18,7 +18,7 @@ Untuk gambaran, saya berikan demo aplikasi berupa gif ketika proyek tutorial ini
 <figure>
 	<center>
 		<a href="{{ site.url }}/assets/post/2013-04-03-membuat-autentikasi-login-laravel-bagian-1.gif" target="_blank"> 
-			<img src="{{ site.url }}/assets/post/2013-04-03-membuat-autentikasi-login-laravel-bagian-1.gif" width="300px"/>
+			<img src="{{ site.url }}/assets/post/2013-04-03-membuat-autentikasi-login-laravel-bagian-1.gif" width="500px"/>
 		</a>
 	</center>
 </figure>
