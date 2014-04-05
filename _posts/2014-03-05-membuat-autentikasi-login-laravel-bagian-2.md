@@ -507,7 +507,7 @@ Secara kasat mata, kita tidak akan menyadari bila didalamnya terdapat syntax PHP
 Yang ingin saya katakan disini adalah ini merupakan kemampuan dari si `blade` milik laravel. Bila kita kumpulkan hal-hal unik tersebut maka jadi seperti berikut :
 
 - `@if(...) ... @endif` intinya disini berbicara masalah `kondisional if...else...`.
-- `{ { ... } }` bernilai sama dengan `<?php ... ?>`
+- {%raw%}`{{ ... }}`{%endraw%} bernilai sama dengan `<?php ... ?>`
 - `@yield` akan dijadikan tempat menampung isi dari view-view lain.
 
 Catatan : Perhatikan baik-baik. Ketiga hal aneh tersebut tidak akan bisa terbaca oleh laravel tanpa ada **.blade**. Intinya terletak pada penamaan file *View*. `index.php` tidak akan mengenalinya, sedangkan `index.blade.php` lah yang bisa. Itulah salah satu alasan kita membutuhkan `.blade` dibelakangnya.
@@ -538,12 +538,14 @@ Penjelasan ada dimasing-masing komentar. Dibaca baik-baik yak, sampe paham baru 
 Didalamnya hanya akan terdapat tombol login yang akan mengarah kehalaman login, jadi isi seperti berikut :
 
 {% highlight html %}
+{% raw %}
 @extends('_tema.utama')
 
 @section('konten')
 <!-- Ingat, 'route('masuk')' mengarah ke identitas di route -->
-<a href="{ { route('masuk') } }">Login Sebagai Admin</a>
+<a href="{{ route('masuk') }}">Login Sebagai Admin</a>
 @stop
+{% endraw %}
 {% endhighlight %}
 
 ####Untuk `login.blade.php`
@@ -551,55 +553,55 @@ Didalamnya hanya akan terdapat tombol login yang akan mengarah kehalaman login, 
 Halaman ini akan menampilkan form yang akan kita inputan, isi script berikut :
 
 {% highlight html %}
+{% raw %}
 @extends('_tema.utama')
 
 @section('konten')
 <!-- Kita gunakan identitas route berikut -->
-{ { Form::open(array('route' => 'post-masuk')) } }
+{{ Form::open(array('route' => 'post-masuk')) }}
 	
 	<!-- Label dan Textfield dengan id 'username' -->
-	{ { Form::label('username', 'Username') } }
-	{ { Form::text('username') } }
+	{{ Form::label('username', 'Username') }}
+	{{ Form::text('username') }}
 
 	<!-- Berikut adalah session validasi, sebuah kondisional
 		 dimana ketika variabel 'errors' dari 'withErrors() di Controller,
 		 diterima, maka tampilkan validasi yang diterima', 
 		 dalam hal ini, untuk validasi username -->
 	@if($errors->has('username'))
-		{ { $errors->first('username') } }
+		{{ $errors->first('username') }}
 	@endif
 
 	<br/>
 
 	<!-- Label dan Passwordfield dengan id 'password' -->
-	{ { Form::label('password', 'Password') } }
-	{ { Form::password('password') } }
+	{{ Form::label('password', 'Password') }}
+	{{ Form::password('password') }}
 
 	<!-- Berikut adalah session validasi, sebuah kondisional
 		 dimana ketika variabel 'errors' dari 'withErrors() di Controller,
 		 diterima, maka tampilkan validasi yang diterima' 
 		 dalam hal ini untuk validasi password -->
 	@if($errors->has('password'))
-		{ { $errors->first('password') } }
+		{{ $errors->first('password') }}
 	@endif
 
 	<br/>
 
 	<!-- Tombol Masuk -->
-	{ { Form::submit('Masuk') } }
-{ { Form::close() } }
+	{{ Form::submit('Masuk') }}
+{{ Form::close() }}
 @stop
+{% endraw %}
 {% endhighlight %}
 
-**Untuk alasan tertentu, tanda `{ {` saya pisah kan dengan spasi y seharusnya nyatu, silahkan hapus semua spasi yang ada.**
-
-Dan terakhir, coba eksekusi program yang berarti Autentikasi Sederhana kita SELESAI.
+Dan terakhir, coba eksekusi program dengan `php artisan serve` melalui terminal, yang berarti Autentikasi Sederhana kita SELESAI.
 
 ##Kesimpulan
 
 Ya, sebenarnya tutorial ini dikhususkan buat mereka yang betul-betul buta tentang laravel pada khususnya (pemprograman PHP pada umumnya), tetapi memiliki hasrat juang untuk berkenalan dengan si 'laravel' itu tadi.
 
-Oleh karenanya sangat wajar bila programmer *pro* bilang kalau tulisan ini terlalu lebay, ngahaha... Intinya pesan dari saya tersampaikan dengan baik. Dan mereka bisa memahami fungsi dari beberapa yang dijelaskan diatas.
+Oleh karenanya sangat wajar bila programmer yang ngakunya *pro* bilang kalau tulisan ini terlalu lebay, ngahaha... Intinya pesan dari saya tersampaikan dengan baik. Dan mereka bisa memahami fungsi dari beberapa yang dijelaskan diatas.
 
 Ingat, semua programmer memiliki ciri khas mereka masing-masing, jadi wajar bila tata penulisan syntax atau bahkan urutan dalam pembuatannya berbeda antara satu dengan lainnya. Dan ini mengingatkan saya tentang semboyan *Bhineka Tunggal Ika* XD. Meski memiliki cara dan urutan yang berbeda-beda, namun memiliki satu tujuan jua. Ngahahaha...
 
