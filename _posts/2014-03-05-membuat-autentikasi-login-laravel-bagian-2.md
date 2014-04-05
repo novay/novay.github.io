@@ -476,6 +476,7 @@ Akan dijadikan fondasi dasar kerangka website Anda. Tenang aja, nanti kalian bak
 Sekarang isi seperti berikut :
 
 {% highlight html %}
+{% raw %}
 <!DOCTYPE html>
 <html>
 	<head>
@@ -488,7 +489,7 @@ Sekarang isi seperti berikut :
 		ingat ketika controller pernah mengirim session
 		melalui variabel 'pesan' melalui 'withPesan();'? Kalau lupa coba cek ulang -->
 		@if(Session::has('pesan'))
-			<p>{ { Session::get('pesan') } }</p>
+			<p>{{ Session::get('pesan') }}</p>
 		@endif
 
 		<!-- Disinilah nantinya yang akan kita isi untuk setiap view utama -->
@@ -496,6 +497,7 @@ Sekarang isi seperti berikut :
 
 	</body>
 </html>
+{% endraw %}
 {% endhighlight %}
 
 Seperti yang kalian lihat, Yap, mereka adalah sekumpulan syntax HTML. Tapi bila diperhatikan ada yang unik didalamnya. 
@@ -515,16 +517,18 @@ Catatan : Perhatikan baik-baik. Ketiga hal aneh tersebut tidak akan bisa terbaca
 Merupakan Halaman yang akan diakses ketika pengguna telah melakukan login, isi seperti berikut :
 
 {% highlight html %}
+{% raw %}
 @extends('_tema.utama') <!-- Kita jadikan sebagai tema, file 'utama.blade.php' dalam foldder '_tema' -->
 
 @section('konten') <!-- Ingat dengan yield 'konten' di 'utama.blade.php'?... Inilah yang akan diselipkan disana -->
 
 <!-- nama_tampilan dan email diambil dari field dalam tabel pengguna di database -->
-<p>Selamat Datang, { { Auth::user()->nama_tampilan } } ({ { Auth::user()->email } })</p>
+<p>Selamat Datang, {{ Auth::user()->nama_tampilan }} ({{ Auth::user()->email }})</p>
 
 <!-- Sekarang Logout menggunakan route, perhatikan identitas route yang digunakan -->
-<p><a href="{ { route('keluar') } }">Keluar</a></p>
+<p><a href="{{ route('keluar') }}">Keluar</a></p>
 @stop
+{% endraw %}
 {% endhighlight %}
 
 Penjelasan ada dimasing-masing komentar. Dibaca baik-baik yak, sampe paham baru dilanjut.
