@@ -16,11 +16,15 @@ Saya sarankan sebelum mengikuti tutorial ini, sebaiknya Anda telah menguasai tut
 - Pengaturan Database
 - dan mungkin ada lagi yang lainnya.
 
-Jadi, saya asumsikan kalian memahami beberapa poin diatas sebelum meneruskan bacaan ini.
+Jadi, saya asumsikan kalian memahami beberapa poin diatas sebelum meneruskan bacaan ini. 
+
+Saya juga mengharapkan kalian betul-betul memperhatikan tiap baris komentar yang ada pada syntax-syntax yang akan dibuat nanti. Alasannya karena penjelasan dari syntaxnya akan dibahas langsung disana.
 
 Oke, mula-mula saya ingin pastikan kalian tahu dulu maksud dari **CRUD** disini. **CRUD** merupakan singkatan dari **Create**, **Read**, **Update** dan **Delete**. Bila diartikan berarti *Menciptakan, Membaca, Memperbarui* dan *Menghapus*.
 
-Hampir semua jenis merk aplikasi pasti terdapat aktifitas CRUD didalamnya. Sekarang pertanyaannya adalah:
+Hampir semua jenis merk aplikasi pasti terdapat aktifitas **CRUD** didalamnya. 
+
+Sekarang pertanyaannya adalah:
 
 - *Apa yang diciptakan?*
 - *Apa yang dibaca?*
@@ -29,7 +33,7 @@ Hampir semua jenis merk aplikasi pasti terdapat aktifitas CRUD didalamnya. Sekar
 
 Jawabannya **TERGANTUNG**. Tergantung dari apa yang menjadi isi dari aplikasi yang ingin Anda bangun. Sebagai contoh sederhana mari kita perhatikan bagaimana cara kerja sebuah *blog*?
 
-- *Apakah tulisan dalam blog itu muncul dengan sendirinya?* **AJAIB**. Tentu saja ada yang mengolah kata-katanya. Setelah kata-kata diolah, mau tidak mau si *blogger* harus terlibat langsung dengan aplikasi miLiknya. Dengan cara men-**CIPTA**-kan tulisan baru berisi kata-kata yang diolah tadi agar bisa masuk kedalam database *aplikasi blog* miliknya.
+- *Apakah tulisan dalam blog itu muncul dengan sendirinya?* **AJAIB**. Tentu saja ada yang mengolah kata-katanya. Setelah kata-kata diolah, mau tidak mau si *blogger* harus terlibat langsung dengan aplikasi miliknya. Dengan cara men-**CIPTA**-kan tulisan baru berisi kata-kata yang diolah tadi agar bisa masuk kedalam database *aplikasi blog* miliknya.
 
 - Untuk diketahui bahwa isi tulisan si *blogger* tadi ditampung didalam database, artinya si *aplikasi*-lah yang kemudian akan mem-**BACA**-kan isinya dari database untuk ditampilkan kembali kepada si *blogger*.
 
@@ -48,9 +52,17 @@ Jadi jawaban untuk studi kasus diatas terkait ke-empat pertanyaan tadi adalah **
 
 ---
 
-Dan untuk itulah, saya akan mencoba memperkenalkan **CRUD** pada Laravel dan bagaimana sistem kerjanya serta cara membuatnya bagi mereka yang ingin membuat proyek menggunakan laravel.
+Dan untuk itulah, saya akan mencoba memperkenalkan **CRUD** pada Laravel dan bagaimana sistem kerjanya serta cara membuatnya bagi mereka yang ingin membuat proyek menggunakan **Laravel**.
 
-Biasanya, aktifitas **CRUD** terjadi dalam **Admin Panel** yang secara tak langsung akan kita bangun. Sebagai contoh penerapannya, saya akan membuat aplikasi **Biodata** sederhana. Mari kita mulai....
+Biasanya, aktifitas **CRUD** terjadi dalam **Admin Panel** yang secara tak langsung akan kita bangun. Sebagai contoh penerapannya, saya akan membuat **Aplikasi Biodata Sederhana**. Mari kita mulai...
+
+Berikut demo hasil akhir aplikasi yang akan kita bangun :
+
+<figure><center>
+	<a href="https://raw.githubusercontent.com/novay/novay-gallery/master/My%20Screenshot/Demo/crud-sederhana-laravel.gif" target="_blank"> 
+		<img src="https://raw.githubusercontent.com/novay/novay-gallery/master/My%20Screenshot/Demo/crud-sederhana-laravel.gif" width="700px"/>
+	</a>
+</center></figure>
 
 ##Persiapan Awal
 
@@ -107,11 +119,11 @@ class BuatTabelBiodata extends Migration {
 ?>
 {% endhighlight %}
  
-Pastikan Anda telah melakukan pengaturan database yang digunakan. Kemudian lakukan perintah berikut :
+Pastikan Anda telah melakukan pengaturan database. Kemudian lakukan perintah berikut :
 
 `php artisan migrate`
 
-Dan sekarang kita memiliki tabel **Biodata** yang nantinya akan kita jadikan korban **CRUD**.
+Artinya sekarang kita memiliki tabel **Biodata** yang nantinya akan kita jadikan korban **CRUD**.
 
 
 ###Model
@@ -181,15 +193,15 @@ Sebelum lanjut, coba akses semua **URL** yang ada pada *route* diatas. Bila berh
 
 ###Controller
 
-Jujur saja, sebenarnya pihak Laravel sendiri telah menyediakan fitur *resource controller* dimana sebenarnya akan sangat membantu terutama dalam pengolahan CRUD ini, karena sifatnya yang otomatis. Mungkin akan saya membuatkan tutorial tersendiri nanti untuk yang satu ini.
+Jujur saja, sebenarnya pihak Laravel sendiri telah menyediakan fitur *resource controller* yang sebenarnya sangat membantu dalam pengolahan sebuah aktivitas CRUD karena sifatnya yang otomatis. Mungkin akan saya buatkan tutorial tersendiri nanti untuk yang satu ini.
 
 Berhubung disini konteksnya saya ingin agar si pembaca mengerti alur programnya, maka saya akan jelaskan pembuatan semuanya secara manual saja.
 
-Sebelumnya kita sempat membuat 7 buah route. Dan semua itu nantinya akan kita alih fungsikan menuju ke Controller. 
+Sebelumnya kita sempat membuat 7 buah **route**. Dan semua itu nantinya akan kita alih fungsikan menuju ke **Controller**. 
 
-Untuk itu, kita butuh 7 buah fungsi pada controller untuk menangani setiap route.
+Untuk itu, kita akan membuatkan 7 buah fungsi pada controller untuk menangani masing-masing route tadi.
 
-Sekarang masuk ke direktori `app/controllers/`, dan buat file baru bernama `BiodataController.php`. Isi seperti berikut :
+Sekarang masuk ke direktori `app/controllers/`, dan buat file baru bernama `BiodataController.php`. Lalu isi seperti berikut :
 
 {% highlight php %}
 // app/controllers/BiodataController.php
@@ -238,7 +250,7 @@ class BiodataController extends BaseController {
 
 ###View
 
-Sekarang untuk menentukan halaman yang kita butuhkan, sepetinya kita lagi-lagi harus ditekankan untuk berkhayal. 
+Untuk menentukan halaman yang kita butuhkan, sepertinya kita lagi-lagi ditekankan untuk berkhayal. 
 
 Mari perhatikan perumpamaan dari saya, saya ambil dari route yang telah kita buat sebelumnya :
 
@@ -252,7 +264,7 @@ Mari perhatikan perumpamaan dari saya, saya ambil dari route yang telah kita bua
 
 Bener tidak?
 
-Bila diperhatikan kembali, kita butuh 4 buah view untuk memenuhi standar aplikasi CRUD yang ingin kita bangun.
+Bila diperhatikan kembali, kita butuh 4 buah view untuk memenuhi standar aplikasi CRUD yang akan kita bangun.
 
 Sekarang masuk ke direktori `app/views/` dan ciptakan folder bernama `biodata` lalu buat 4 buah view baru disana. Strukturnya kurang lebih seperti berikut :
 
@@ -268,7 +280,9 @@ Sekarang masuk ke direktori `app/views/` dan ciptakan folder bernama `biodata` l
 
 ---
 
-Dengan ini persiapan awal kita selesai. Sekarang saatnya untuk membuat **Model, Controller, Route** dan **View** yang kita siapkan tadi agar bisa saling bekerja sama.
+Dengan ini persiapan awal kita selesai. 
+
+Dan sekarang saatnya untuk membuat **Model, Controller, Route** dan **View** yang kita siapkan tadi agar bisa saling bekerja sama.
 
 ## Penerapan Program
 
@@ -285,11 +299,11 @@ Bila diingat-ingat lagi, sekarang kita memiliki :
 | Tindakan untuk menghapus Biodata 					| GET     | localhost:8000/hapus/{id} | hapus($id) |
 {: rules="groups"}
 
-Nanti kita akan coba membuatnya berurutan dari **Create**, **Read**, lalu **Update** dan **Delete**. Namun sebelum itu semua, kita akan membuat INDEX-nya terlebih dahulu.
+Nanti kita akan coba membuatnya berurutan dari **Create**, **Read**, lalu **Update** dan **Delete**. Namun sebelum itu semua, kita akan membuat **Index**-nya terlebih dahulu.
 
 ###INDEX
 
-Index disini akan menampilkan informasi atau daftar semua isi yang ada dalam database Anda yang dikemas kedalam sebuah *table*, *dengan ketentuan database telah memiliki isi*. Sedangkan bila database belum memiliki isi, maka **INDEX** akan menampilkan sebuah komentar yang berisi: "Anda belum memiliki isi pada **tabel terkait**", beserta tombol **Tambah**. Seperti pada tampilan berikut :
+Index disini akan menampilkan informasi atau daftar semua isi yang ada dalam database Anda yang dikemas kedalam sebuah *table*, *dengan ketentuan database telah memiliki isi*. Sedangkan bila database belum memiliki isi, maka **INDEX** akan menampilkan halaman seperti pada tampilan berikut :
 
 <figure><center>
 	<a href="{{ site.url }}/assets/post/2014-03-29-crud-sederhana-laravel-1.PNG" target="_blank"> 
@@ -340,14 +354,14 @@ class BiodataController extends BaseController {
 	</head>
 	<body>
 		<h3>Daftar Biodata</h3>
-		<!-- Siapkan variabel pesan untuk menampilkan isinya bila diterima -->
+		<!-- Siapkan variabel pesan untuk menampilkan nilai variabel yang diterima dari controller -->
 		@if(Session::has('pesan'))
 			{{ Session::get('pesan') }}
 		@endif
 		<!-- Jika tabel biodata memiliki isi, tampilkan isi berikut -->
 		@if($biodata->count())
 		<!-- Siapkan tombol untuk membuat biodata baru -->
-		<p><a href="{{ route('baru') }}">Tambah</a></p>
+		<p><a href="#">Tambah</a></p>
 		<table>
 			<thead>
 				<tr>
@@ -370,7 +384,7 @@ class BiodataController extends BaseController {
 					<td>{{ $data->email }}</td>
 					<!-- Siapkan tombol untuk edit dan hapus item tertentu -->
 					<td>
-						<a href="{{ route('lihat', $data->id) }}">Lihat</a>
+						<a href="#">Lihat</a>
 						<a href="#">Edit</a>
 						<a href="#">Hapus</a>
 					</td>
@@ -381,7 +395,7 @@ class BiodataController extends BaseController {
 		<!-- Sedangkan, bila tidak ada isinya, tampilkan isi berikut -->
 		@else
 		<p>Anda belum memiliki isi pada tabel biodata.</p>
-		<p><a href="{{ route('baru') }}">Tambah</a></p>
+		<p><a href="#">Tambah</a></p>
 		@endif
 	</body>
 </html>
@@ -625,9 +639,13 @@ Baris 37	<a href="{{ route('lihat', $data->id) }}">Lihat</a>
 
 ###UPDATE
 
-Kita memiliki halaman index, dimana ia akan menampilkan seluruh data yang ada dalam database dalam bentuk tabel. Kita juga bisa melakukan penambahan kedalamnya, sekaligus menampilkan kembali isi yang telah kita ditambah. Nah, penting untuk kita untuk dapat melakukan perubahan data apabila ada data yang isinya kurang valid artinya kita harus menambahkan fitur **UPDATE**.
+Kita memiliki halaman index, dimana ia akan menampilkan seluruh data yang ada dalam database dalam bentuk tabel. 
 
-Ikuti langkah-langkahnya :
+Kita juga bisa melakukan penambahan biodata baru kedalamnya, sekaligus menampilkan kembali isi yang telah kita tambahkan. 
+
+Nah, penting untuk kita agar dapat melakukan perubahan data apabila suatu saat kita dapati bahwa terdapat data yang isinya kurang valid. Itu artinya kita harus menambahkan fitur **UPDATE** kedalam aplikasi.
+
+Caranya ikuti langkah-langkah berikut :
 
 ####Route
 
@@ -778,9 +796,11 @@ Baris 38	<a href="{{ route('ubah', $data->id) }}">Edit</a>
 {% endraw %}
 {% endhighlight %}
 
+Dengan ini, fitur **UPDATE** selesai.
+
 ###DELETE
 
-Dan terakhir adalah fitur untuk menghapus salah satu isi database.
+Terakhir adalah fitur untuk menghapus salah satu isi database. Langsung saja :
 
 ####Route
 
@@ -826,7 +846,7 @@ Baris 39	<a href="{{ route('hapus', $data->id) }}">Hapus</a>
 {% endraw %}
 {% endhighlight %}
 
-Untuk tahap ini tidak membutuhka view, hanya perubahan pada halaman index saja.
+Untuk tahap ini tidak membutuhka view baru, hanya perubahan pada halaman index saja.
 
 ###Selesai
 
@@ -834,10 +854,10 @@ Untuk tahap ini tidak membutuhka view, hanya perubahan pada halaman index saja.
 
 ###KESIMPULAN
 
-Sebenarnya bila ingin membuat sebuah aktivitas CRUD dalam aplikasi yang sedang kita bangun tata caranya sangat beragam, bahkan ada yang bersifat otomatis dengan memanfaatkan laravel generator milik Jeffrey Way. Disini sengaja dibuat sedikit lebih ribet agar supaya pembaca yang mengikuti tutorial ini mengerti dan paham, khususnya mengenai fungsi-fungsi dasar yang sering ditemui dalam membangun sebuah project dalam laravel.
-
-Akhirnya dengan ini saya tutup tulisan ini. Terima kasih.
+Sebenarnya bila ingin membuat sebuah aktivitas **CRUD** dalam aplikasi yang sedang kita bangun tata caranya sangat beragam, bahkan ada yang bersifat otomatis dengan memanfaatkan laravel generator milik Jeffrey Way. Disini sengaja dibuat sedikit lebih ribet agar supaya pembaca yang mengikuti tutorial ini mengerti dan paham, khususnya mengenai fungsi-fungsi dasar yang sering ditemui dan digunakan dalam membangun sebuah proyek menggunakan Laravel.
 
 Untuk yang ingin melihat langsung hasil dari tutorial ini bisa :
 
 ###[Download via GITHUB](https://github.com/novay/laravel-crud-sederhana)
+
+Dan akhirnya dengan ini saya tutup jua tulisan ini dengan ucapan Terima kasih.
