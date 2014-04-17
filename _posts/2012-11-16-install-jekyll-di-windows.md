@@ -11,7 +11,7 @@ share: true
 
 Sebenarnya Jekyll selama ini hanya memanjakan para pengguna varian Linux saja, tapi beberapa bulan terakhir ada seseorang yang telah mencoba mengembangkannya agar semua *command* yang tadinya hanya bisa diakses di distro linux dapat di akses oleh Windows melalui *command prompt*-nya. 
 
-Eits, tunggu dulu... [Jekyll itu apa ya?](), klik untuk memperjelas apa sebenarnya Jekyll itu. Untuk instalasi mari kita lanjut pada bahan-bahan yang sebelumnnya harus kita sediakan. 
+Eits, tunggu dulu... [Jekyll itu apa ya?]({{site.url}}/blog/2012/11/12/apa-itu-jekyll/), klik untuk memperjelas apa sebenarnya Jekyll itu. Untuk instalasi mari kita lanjut pada bahan-bahan yang sebelumnnya harus kita sediakan. 
 
 Sebenarnya apabila dilihat dari kebutuhannya, agar Jekyll ini bisa berjalan baik di Windows kita, ada beberapa paket yang harus kita install lebih dulu, mulai dari **Ruby**, **Ruby GEM**, entah itu namanya **curl**, **Jekyll** itu sendiri, kemudian ada **Python** dan ada juga **Pygments**. Kali ini saya mencoba untuk tidak terlalu menyinggung semua paket. Dan saya rasa, untuk melakukan instalasi semua paket satu per satu itu terbilang ribet, ruwet, males, kebanyakan soalnya. 
 

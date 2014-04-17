@@ -184,4 +184,4 @@ Namun di dalam Laravel anda bisa menggunakan syntax seperti ini dengan memanfaat
 {% endraw %}
 {% endhighlight %}
 
-Sekian pembahasan mengenai Form Open di Laravel. Semoga bermanfaat.
+Sekian pembahasan mengenai Form Open, Model dan Close di Laravel. Di lain waktu saya akan coba mengupas lagi beragam hal unik mengenai form menggunakan 'Facade' Laravel. Semoga bermanfaat.

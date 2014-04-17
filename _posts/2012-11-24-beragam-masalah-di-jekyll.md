@@ -11,7 +11,12 @@ share: true
 
 Kali ini saya akan coba kumpulkan semua kesalahan-kesalahan yang biasa ditemukan dalam penggunaan Jekyll berdasarkan pengalaman pribadi saya sendiri :
 
-##Encoding Issue. Liquid Exception: incompatible character encodings: CP850 and UTF-8.
+Daftar Isi :
+
+- [Liquid Exception: CP850 and UTF-8](#satu)
+- [Missing Dependency: kramdown](#dua)
+
+###<a name="satu"></a>Encoding Issue. Liquid Exception: incompatible character encodings: CP850 and UTF-8.
 
 Penyelesaiannya gunakan syntax berikut lewa **CMD** :
 
@@ -19,7 +24,7 @@ Penyelesaiannya gunakan syntax berikut lewa **CMD** :
 chcp 65001
 {% endhighlight %}
 
-##Missing Dependency: kramdown
+###<a name="dua"></a>Missing Dependency: kramdown
 
 Artinya Paket `kramdown` tidak terinstall di mesin Anda, gunakan cara berikut :
 
