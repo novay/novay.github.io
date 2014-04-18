@@ -403,6 +403,7 @@ Output :
 		<a href="{{ site.url }}/assets/post/2014-04-16-implementasi-relasi-di-laravel-dengan-eloquent-3.PNG" target="_blank"> 
 			<img src="{{ site.url }}/assets/post/2014-04-16-implementasi-relasi-di-laravel-dengan-eloquent-3.PNG" width="500px"/>
 		</a>
+		<figcaption>Nama Ayah saya tuh.</figcaption>
 	</center>
 </figure>
 
@@ -667,6 +668,7 @@ Output :
 		<a href="{{ site.url }}/assets/post/2014-04-16-implementasi-relasi-di-laravel-dengan-eloquent-5.PNG" target="_blank"> 
 			<img src="{{ site.url }}/assets/post/2014-04-16-implementasi-relasi-di-laravel-dengan-eloquent-5.PNG" width="500px"/>
 		</a>
+		<figcaption>Nama Dosen si Mahasiswa terkait.</figcaption>
 	</center>
 </figure>
 
@@ -712,6 +714,7 @@ Output :
 		<a href="{{ site.url }}/assets/post/2014-04-16-implementasi-relasi-di-laravel-dengan-eloquent-6.PNG" target="_blank"> 
 			<img src="{{ site.url }}/assets/post/2014-04-16-implementasi-relasi-di-laravel-dengan-eloquent-6.PNG" width="500px"/>
 		</a>
+		<figcaption>Seluruh mahasiswa bimbingannya dosen Yulianto</figcaption>
 	</center>
 </figure>
 
@@ -954,6 +957,7 @@ Output :
 		<a href="{{ site.url }}/assets/post/2014-04-15-penalaran-relasi-database-8.png" target="_blank"> 
 			<img src="{{ site.url }}/assets/post/2014-04-15-penalaran-relasi-database-8.png" width="400px"/>
 		</a>
+		<figcaption>Hobi Ane disini.</figcaption>
 	</center>
 </figure>
 
@@ -985,6 +989,7 @@ Ini output mereka yang punya hobi mandi hujan :
 		<a href="{{ site.url }}/assets/post/2014-04-15-penalaran-relasi-database-9.png" target="_blank"> 
 			<img src="{{ site.url }}/assets/post/2014-04-15-penalaran-relasi-database-9.png" width="400px"/>
 		</a>
+		<figcaption>Mereka yang punya hobi mandi hujan.</figcaption>
 	</center>
 </figure>
 
@@ -1066,6 +1071,7 @@ Sekarang coba deh akses `http://localhost:8000/eloquent` lalu lihat hasilnya.
 		<a href="{{ site.url }}/assets/post/2014-04-15-penalaran-relasi-database-10.png" target="_blank"> 
 			<img src="{{ site.url }}/assets/post/2014-04-15-penalaran-relasi-database-10.png" width="400px"/>
 		</a>
+		<figcaption>Inilah Keajaiban Eloquent.</figcaption>
 	</center>
 </figure>
 
