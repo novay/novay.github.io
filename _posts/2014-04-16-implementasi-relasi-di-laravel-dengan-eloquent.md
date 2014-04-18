@@ -720,7 +720,7 @@ Output :
 
 ---
 
-##<a name="many-to-manu"></a>Penggunaan Relasi Many-to-Many
+##<a name="many-to-many"></a>Penggunaan Relasi Many-to-Many
 
 Saatnya berkenalan dengan **Many-to-Many**. Berikut saya cuplik beberapa kata-kata saya dari postingan sebelumnya.
 
@@ -922,8 +922,8 @@ php artisan db:seed
 
 <figure>
 	<center>
-		<a href="{{ site.url }}/assets/post/2014-04-15-penalaran-relasi-database-7.png" target="_blank"> 
-			<img src="{{ site.url }}/assets/post/2014-04-15-penalaran-relasi-database-7.png" width="400px"/>
+		<a href="{{ site.url }}/assets/post/2014-04-16-implementasi-relasi-di-laravel-dengan-eloquent-7.PNG" target="_blank"> 
+			<img src="{{ site.url }}/assets/post/2014-04-16-implementasi-relasi-di-laravel-dengan-eloquent-7.PNG" width="400px"/>
 		</a>
 	</center>
 </figure>
@@ -954,8 +954,8 @@ Output :
 
 <figure>
 	<center>
-		<a href="{{ site.url }}/assets/post/2014-04-15-penalaran-relasi-database-8.png" target="_blank"> 
-			<img src="{{ site.url }}/assets/post/2014-04-15-penalaran-relasi-database-8.png" width="400px"/>
+		<a href="{{ site.url }}/assets/post/2014-04-16-implementasi-relasi-di-laravel-dengan-eloquent-8.PNG" target="_blank"> 
+			<img src="{{ site.url }}/assets/post/2014-04-16-implementasi-relasi-di-laravel-dengan-eloquent-8.PNG" width="400px"/>
 		</a>
 		<figcaption>Hobi Ane disini.</figcaption>
 	</center>
@@ -986,8 +986,8 @@ Ini output mereka yang punya hobi mandi hujan :
 
 <figure>
 	<center>
-		<a href="{{ site.url }}/assets/post/2014-04-15-penalaran-relasi-database-9.png" target="_blank"> 
-			<img src="{{ site.url }}/assets/post/2014-04-15-penalaran-relasi-database-9.png" width="400px"/>
+		<a href="{{ site.url }}/assets/post/2014-04-16-implementasi-relasi-di-laravel-dengan-eloquent-9.PNG" target="_blank"> 
+			<img src="{{ site.url }}/assets/post/2014-04-16-implementasi-relasi-di-laravel-dengan-eloquent-9.PNG" width="400px"/>
 		</a>
 		<figcaption>Mereka yang punya hobi mandi hujan.</figcaption>
 	</center>
@@ -1068,8 +1068,8 @@ Sekarang coba deh akses `http://localhost:8000/eloquent` lalu lihat hasilnya.
 
 <figure>
 	<center>
-		<a href="{{ site.url }}/assets/post/2014-04-15-penalaran-relasi-database-10.png" target="_blank"> 
-			<img src="{{ site.url }}/assets/post/2014-04-15-penalaran-relasi-database-10.png" width="400px"/>
+		<a href="{{ site.url }}/assets/post/2014-04-16-implementasi-relasi-di-laravel-dengan-eloquent-10.PNG" target="_blank"> 
+			<img src="{{ site.url }}/assets/post/2014-04-16-implementasi-relasi-di-laravel-dengan-eloquent-10.PNG" width="400px"/>
 		</a>
 		<figcaption>Inilah Keajaiban Eloquent.</figcaption>
 	</center>
@@ -1209,7 +1209,7 @@ Untuk menghapus record dalam tabel sangatlah mudah, kita bisa menggunakan bebera
 
 ---
 
-##Kesimpulan
+##<a name="kesimpulan"></a>Kesimpulan
 
 Untuk hari ini saya berkeras kalo **Eloquent** itu CALO.
 
@@ -1223,9 +1223,11 @@ Oke, saya kupas kembali beberapa poin penting dari postingan hari ini :
 - Pembahasannya acak adut nyampur sana sini. *Oke, maaf*
 - Pokoknya intinya begitulah. **RELASI**.
 
-<center>W-_-W *Where is the important things?* W-_-W</center>
+<center> w-_-w <i>Where is the important things?</i> w-_-w 
 
-###<center>Source Code [Via Github](https://github.com/novay/relasi-laravel)</center>
+<h2>Source Code <a href="https://github.com/novay/relasi-laravel" target="_blank">Via Github</a></h2>
+
+</center>
 
 Semoga bermanfaat sahabatku sedunia dan setanah air.
 
