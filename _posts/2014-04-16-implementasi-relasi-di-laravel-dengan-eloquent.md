@@ -1020,7 +1020,7 @@ Tambahkan bumbu berikut dalam route kalian :
 ...
 
 ?>
-{% highlight %}
+{% endhighlight %}
 
 ####View
 
@@ -1057,7 +1057,7 @@ Disini kita akan menggunakan **Blade Engine** untuk melakukan *looping* data dan
 	</body>
 </html>
 
-{% highlight %}
+{% endhighlight %}
 
 Sekarang coba deh akses `http://localhost:8000/eloquent` lalu lihat hasilnya.
 
