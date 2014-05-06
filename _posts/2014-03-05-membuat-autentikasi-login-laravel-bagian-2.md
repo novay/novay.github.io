@@ -23,9 +23,44 @@ Ketiga poin diatas sebenarnya sudah cukup untuk kita sebagai bahan dasar membang
 
 Models pada laravel sebenarnya memiliki banyak fungsi, bahkan bisa bertindak sebagai "wadah logika program". Namun pada panduan kali ini, saya hanya akan menjadikan *models* sebagai sarana meng-*koneksikan aplikasi* dengan *database*. Karena peran sebenarnya memang *itu*. 
 
-Perhatikan file `User.php` pada direktori `app/models` di baris 13. Terdapat baris syntax `protected $table = 'users';` yang maksudnya aplikasi Anda sejak awal telah memiliki Model bernama `User` yang berisi seluruh isi tabel bernama `users`. Untuk diketahui bahwa pada tahap pembuatan "database" sebelumnya, kita memang telah membuat sebuah tabel, tetapi tabel yang kita buat bukan bernama `users` melainkan `pengguna`. Jadi, Anda boleh mengubah `users` menjadi `pengguna`. Sudah tau maksudnya kan? Nama tabel vroh, nama tabel XD
+Perhatikan file `User.php` pada direktori `app/models` di baris 13. Terdapat baris syntax `protected $table = 'users';` yang maksudnya aplikasi Anda sejak awal telah memiliki Model bernama `User` yang berisi seluruh isi tabel bernama `users`. 
+
+Untuk diketahui bahwa pada tahap pembuatan "database" sebelumnya, kita memang telah membuat sebuah tabel, tetapi tabel yang kita buat bukan bernama `users` melainkan `pengguna`. Jadi, Anda harus mengubah `users` menjadi `pengguna`. Sudah tau maksudnya kan? Nama tabel vroh, nama tabel XD
 
 Tips : Biasanya kalau saya pribadi, pembuatan model disini menyesuaikan banyaknya tabel yang saya punya pada aplikasi yang sedang saya bangun. Jadi, setiap model memiliki fungsi menangani isi satu tabel. Misal, dalam database saya memiliki tabel pengguna, artikel dan kategori, maka dalam *models* saya buat 3 file juga, `Pengguna.php`, `Artikel.php` dan `Kategori.php`. Kurang lebih seperti itu.
+
+**Update* bagi pengguna Laravel versi terbaru (4.1.26 keatas), tambahkan 3 fungsi berikut dalam file `User.php`.
+
+{% highlight php %}
+// app/models/User.php
+<?php
+
+use Illuminate\Auth\UserInterface;
+use Illuminate\Auth\Reminders\RemindableInterface;
+
+class User extends Eloquent implements UserInterface, RemindableInterface {
+
+	...
+
+	protected $table = 'pengguna';
+
+	...
+
+	public function getRememberToken() {
+		return $this->remember_token;
+	}
+
+	public function setRememberToken($value) {
+		$this->remember_token = $value;
+	}
+
+	public function getRememberTokenName() {
+		return 'remember_token';
+	}
+
+}
+?>
+{% endhighlight %}
 
 ### Routes
 
@@ -377,21 +412,17 @@ Sekarang isi menjadi seperti berikut :
 		$validasi = Validator::make($input, $aturan);
 
 		# Bila validasi gagal
-
 		if($validasi->fails()) {
 
 			# Kembali kehalaman dan tampilkan error
-			
 			return Redirect::back()
 				->withInput()
 				->withErrors($validasi);
 		
 		# Bila sukses
-		
 		} else {
 			
 			# Tarik masing-masing inputan yang berasal dari Form
-			
 			$username 	= Input::get('username');
 			$password	= Input::get('password');
 			/* Jadikan sati untuk keperluan verifikasi */
@@ -403,15 +434,12 @@ Sekarang isi menjadi seperti berikut :
 			if(Auth::attempt($verifikasi)) {
 			
 				# Masuk ke Halaman Beranda Admin
-			
 				return Redirect::route('admin');
 			
 			# Bila tidak cocok
-			
 			} else {
 			
 				# Kembali kehalaman dan tampilkan error
-			
 				return Redirect::back()
 					->withPesan('Username dan Password tidak cocok.');
 			}

@@ -1,12 +1,16 @@
 ---
 layout: post
-title: Stiker BBM Gratis
+title: Stiker BBM Gratis [Banned]
 description: "Cara hack Stiker BBM gratis."
 modified: 2014-04-05
 category: blog
 tags: [android, hack, trik]
 comments: true
 share: true
+---
+
+###Maaf, trik ini telah di banned oleh pihak BBM.
+
 ---
 
 Ada yang tau kalo BBM punya fitur baru? Ya kalo belum tau coba *update* dulu deh BBMnya. 

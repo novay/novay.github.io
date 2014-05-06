@@ -86,7 +86,7 @@ Pastikan `NamaController` beserta `method` yang Anda tuju tersedia agar tidak te
 
 ###Method yang Berbeda
 
-Secara default Laravel akan selalu membuka form dengan method 'POST'. Sekarang bagaimana bila kita ingin menggunakan method lain seperti '**GET**', '**PUT**', '**PATCH**', atau '**DELETE**'?
+Secara default Laravel akan selalu membuka form dengan method **POST**. Sekarang bagaimana bila kita ingin menggunakan method lain seperti **GET**, **PUT**, **PATCH**, atau **DELETE**?
 
 Berikut saya jelaskan caranya :
 
@@ -180,8 +180,8 @@ Namun di dalam Laravel anda bisa menggunakan syntax seperti ini dengan memanfaat
 
 {% highlight html %}
 {% raw %}
-`{{ Form::close }}`
+{{ Form::close }}
 {% endraw %}
 {% endhighlight %}
 
-Sekian pembahasan mengenai Form Open, Model dan Close di Laravel. Di lain waktu saya akan coba mengupas lagi beragam hal unik mengenai form menggunakan 'Facade' Laravel. Semoga bermanfaat.
+Sekian pembahasan mengenai Form Open, Model dan Close di Laravel. Di lain waktu saya akan coba mengupas lagi beragam hal unik mengenai form menggunakan *Facade* Laravel. Semoga bermanfaat.

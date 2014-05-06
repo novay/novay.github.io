@@ -2,7 +2,7 @@
 layout: post
 title: Autentikasi Login Laravel - 1 Pengolahan Database
 description: "Contoh penerapan pembuatan aplikasi autentikasi sederhana dengan menggunakan framework laravel 4."
-modified: 2013-04-03
+modified: 2014-04-13
 category: blog
 tags: [laravel, php, tutorial]
 comments: true
@@ -12,6 +12,12 @@ share: true
 Sekarang saya akan mencoba membuat halaman **login** sederhana seperti yang biasa kita lihat pada website-website yang menerapkan sistem **member** pada umumnya. 
 
 Seperti misalnya **Facebook**. Itu loh, yang masukin `username` sama `password`.
+
+###UPDATE
+
+Berhubung kang Taylor Otwell sang empunya Laravel telah melakukan update pada Enginenya ini, saya yakin banyak diantara kalian yang akan menemukan masalah dalam tulisan ini, kecuali yang menggunakan laravel versi 4.1.25 kebawah.
+
+Untuk itu, tulisan dibawah telah banyak dilakukan perubahan. Selamat belajar.
 
 Untuk gambaran, saya berikan demo aplikasi berupa gif ketika proyek tutorial ini jadi :
 
@@ -27,7 +33,7 @@ Juga buat yang ingin langsung oprek *source code*-nya bisa download di [GITHUB](
 
 Sebelum memulainya ada beberapa hal yang perlu Anda ketahui:
 
-- Saya menggunakan **Windows 8**
+- Saya menggunakan **Windows 8** *(Status ori dipertanyakan)*
 - Sistem yang dibangun menggunakan [Laravel](https://github.com/laravel/laravel) 
 - Pengelola database ialah [SQLITE]() untuk memudahkan proses pembelajaran.
 
@@ -71,7 +77,9 @@ Sekarang kita akan mulai membangun sebuah database. Sebelum memulainya, pastikan
 
 `'default' => 'mysql',`
 
-Ubah `'mysql'` menjadi `'sqlite'`. Yang artinya kita mengubah penggunaan koneksi database kita menjadi 'SQLITE', sesuai dengan yang saya rencanakan sebelumnya.
+Ubah `'mysql'` menjadi `'sqlite'`. Yang artinya kita mengubah penggunaan koneksi database kita menjadi 'SQLITE', sesuai dengan yang saya rencanakan sebelumnya. Sehingga menjadi :
+
+`'default' => 'sqlite',`
 
 "" 
 Secara *default*, laravel menyediakan file **sqlite** kosong yang siap pakai didalam folder `app/database/` dengan nama `production.sqlite`. Anda diperbolehkan mengubah nama serta memindahkan letak file yang disediakan tersebut dengan ketentuan Anda harus memperhatikan isi file `app/config/database.php` pada baris `51`.
@@ -83,11 +91,11 @@ Ringkasnya, *migrations* disini merupakan sebuah cara dimana kita bisa memanipul
 
 Laravel memungkinkan Anda untuk menciptakan sebuah file *migration* dengan hanya menggunakan perintah **artisan**. Caranya cukup mudah, buka **CMD** lalu masuk ke direktori proyek dan kemudian eksekusi perintah berikut :
 
-`php artisan migrate:make buat_tabel_pengguna --table=pengguna --create`
+`php artisan migrate:make buat_tabel_pengguna --create=pengguna`
 
 - `migrate:make` merupakan satu paket perintah untuk menciptakan file *migration*.
 - `buat_tabel_pengguna` akan menjadi bagian dari nama file yang diciptakan *####_##_##_######_buat_tabel_pengguna.php*. Simbol # menggantikan angka pada waktu sekarang berurutan seperti ini : `Tahun_Bulan_Tanggal_JamMenitDetik`. Semoga paham XD.
-- `--table=pengguna --create`, sebenarnya ini sifatnya *optional*, bisa digunakan bisa tidak, perintah ini akan sedikit mempengaruhi isi file *migration* dengan fungsi *Blueprint*. 
+- `--create=pengguna`, sebenarnya ini sifatnya *optional*, bisa digunakan bisa tidak, perintah ini akan sedikit mempengaruhi isi file *migration* dengan membuat `Schema::create()` dan `Schema::drop()` secara otomatis. 
 
 Secara keseluruhan perintah tersebut secara otomatis akan menghasilkan sebuah file ke dalam folder `app/database/migrations` dengan nama *####_##_##_######_buat_tabel_pengguna.php*. Sekarang buka file yang dihasilkan tersebut lalu tambahkan beberapa baris syntax menjadi seperti berikut :
 
@@ -110,10 +118,13 @@ class BuatTabelPengguna extends Migration {
 		Schema::create('pengguna', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('nama_tampilan', 50);
-			$table->string('username', 50);
-			$table->string('password', 50);
-			$table->string('email', 50);
+
+			$table->string('nama_tampilan');
+			$table->string('username', 40);
+			$table->string('password', 60);
+			$table->string('email');
+			$table->string('remember_token');
+
 			$table->timestamps();
 		});
 	}
@@ -133,6 +144,8 @@ class BuatTabelPengguna extends Migration {
 {% endhighlight %}
 
 Sekarang file *migration* ini memiliki tanggung jawab untuk menciptakan tabel bernama **pengguna** dan juga memiliki hak untuk menghapusnya *(rollback)*. Untuk menjalankannya cukup dengan mengetikkan perintah melalui **CMD**.
+
+**UPDATE** Terdapat penambahan field `remember_token` disini, untuk beberapa alasan bagi mereka yang menggunakan Laravel versi baru.
 
 `php artisan migrate`
 
@@ -163,11 +176,12 @@ class SeederTabelPengguna extends Seeder
 		DB::table('pengguna')->delete();
 
 		$tampungan = (array(
-				'id' 			=> '1',
+				'id' 			=> 1,
 				'nama_tampilan'	=> 'Noviyanto Rachmady',
 				'username'		=> 'novay',
 				'password'		=> Hash::make('admins'),
-				'email'			=> 'novay@otaku.si',
+				'email'			=> 'novay@about.me',
+				'remember_token'=> '';
 				'created_at' 	=> new DateTime,
 				'updated_at' 	=> new DateTime
 		));
