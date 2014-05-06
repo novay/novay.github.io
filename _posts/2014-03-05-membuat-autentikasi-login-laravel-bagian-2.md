@@ -633,6 +633,8 @@ Oleh karenanya sangat wajar bila programmer yang ngakunya *pro* bilang kalau tul
 
 Ingat, semua programmer memiliki ciri khas mereka masing-masing, jadi wajar bila tata penulisan syntax atau bahkan urutan dalam pembuatannya berbeda antara satu dengan lainnya. Dan ini mengingatkan saya tentang semboyan *Bhineka Tunggal Ika* XD. Meski memiliki cara dan urutan yang berbeda-beda, namun memiliki satu tujuan jua. Ngahahaha...
 
+Bilamana kiranya ada yang mau ditanyakan, langsung curahkan semuanya dikomentar vroh.
+
 Akhir kata, 
 Happy Coding dan Salam Olahraga.
 Wassalam.
