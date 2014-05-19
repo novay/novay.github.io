@@ -175,16 +175,16 @@ class SeederTabelPengguna extends Seeder
 	{
 		DB::table('pengguna')->delete();
 
-		$tampungan = (array(
+		$tampungan = array(
 				'id' 			=> 1,
-				'nama_tampilan'	=> 'Noviyanto Rachmady',
+				'nama_tampilan'		=> 'Noviyanto Rachmady',
 				'username'		=> 'novay',
 				'password'		=> Hash::make('admins'),
 				'email'			=> 'novay@about.me',
-				'remember_token'=> '';
-				'created_at' 	=> new DateTime,
-				'updated_at' 	=> new DateTime
-		));
+				'remember_token'	=> '';
+				'created_at' 		=> new DateTime,
+				'updated_at' 		=> new DateTime
+		);
 
 		DB::table('pengguna')->insert($tampungan);
 	}
