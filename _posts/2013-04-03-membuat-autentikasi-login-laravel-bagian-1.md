@@ -181,7 +181,7 @@ class SeederTabelPengguna extends Seeder
 				'username'		=> 'novay',
 				'password'		=> Hash::make('admins'),
 				'email'			=> 'novay@about.me',
-				'remember_token'	=> '';
+				'remember_token'	=> '',
 				'created_at' 		=> new DateTime,
 				'updated_at' 		=> new DateTime
 		);
