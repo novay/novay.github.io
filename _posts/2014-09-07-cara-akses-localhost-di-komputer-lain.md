@@ -25,16 +25,16 @@ Dari pertanyaan kedua sudah jelas kalau laptop yang bertindak sebagai **server**
 
 Secara definitif jaringan **Ad-Hoc** pada dasarnya adalah sebuah jaringan area lokal yang dapat diatur dengan sangat mudah dan spontan dalam waktu apapun yang memungkinkan komputer dan perangkat untuk berkomunikasi secara langsung satu sama lain selama masih berada dalam jangkauan *ad-hoc*. Sebenarnya teknologi ini telah ada saat Windows masih XP. Sejak saat itulah sesuatu menjadi mungkin untuk berbagi data dan koneksi internet antara perangkat nirkabel lainnya.
 
-Untuk hari ini saya hanya akan menuangkan cara mengkoneksikannya menggunakan sistem operasi Windows 7 dulu, mungkin untuk Windows 8 besok saya buatkan, kenapa? karena caranya menurut saya lebih sulit dari Windows 7.
+Untuk hari ini saya hanya akan menuangkan cara mengkoneksikannya menggunakan sistem operasi Windows 7 dulu, mungkin untuk Windows 8 besok saya buatkan, kenapa? karena caranya menurut saya lebih ribet dari Windows 7.
 
 ### Cara di Windows 7
 
-Sekarang fokuskan ke tombol Start Windows, kemudian pada kolom *search* ketikkan “wireless”. Sampai kamu melihat opsi “Manage Wireless Networks” dan pilih.
+Sekarang fokuskan ke tombol **Start** Windows, kemudian pada kolom **search** ketikkan **“wireless”**. Sampai kamu melihat opsi **“Manage Wireless Networks”** dan pilih.
 
 <figure>
 	<center>
 		<a href="{{ site.url }}/assets/post/2014-09-07-cara-akses-localhost-di-komputer-lain-01.png" target="_blank"> 
-			<img src="{{ site.url }}/assets/post/2014-09-07-cara-akses-localhost-di-komputer-lain-01.png" width="500px"/>
+			<img src="{{ site.url }}/assets/post/2014-09-07-cara-akses-localhost-di-komputer-lain-01.png" width="300px"/>
 		</a>
 	</center>
 </figure>
@@ -50,7 +50,7 @@ Panel baru akan muncul. Sekarang tekan tombol **Add**.
 </figure>
 
 
-Selanjutnya klik “Create an ad hoc network”.
+Selanjutnya klik **“Create an ad hoc network”**.
 
 <figure>
 	<center>
@@ -60,7 +60,7 @@ Selanjutnya klik “Create an ad hoc network”.
 	</center>
 </figure>
 
-Sekarang kalian akan dihadapkan dengan jendela dimana berisi pesan-pesan dan keterangan terkait tentang jaringan Ad Hoc yang kita maksud disini. Abaikan dengan klik “Next”.
+Sekarang kalian akan dihadapkan dengan jendela dimana berisi pesan-pesan dan keterangan terkait tentang jaringan Ad Hoc yang kita maksud disini. Abaikan dengan klik **“Next”**.
 
 <figure>
 	<center>
@@ -72,8 +72,8 @@ Sekarang kalian akan dihadapkan dengan jendela dimana berisi pesan-pesan dan ket
 
 
 Pada panel selanjutnya, kamu akan ditanya tentang apa yang akan jadi nama jaringan, tipe keamanan, dan password untuk jaringan Anda. 
-Secaram umum, tipe keamanan *(Security type)* yang digunakan adalah *WPA2-Personal*.
-Centang “Save Network” pabila kedepannya Anda akan selalu menggunakan jaringan ad-hoc ini. 
+Secaram umum, tipe keamanan *(Security type)* yang digunakan adalah **WPA2-Personal**.
+Centang **“Save Network”** pabila kedepannya Anda akan selalu menggunakan jaringan ad-hoc ini. 
 
 <figure>
 	<center>
@@ -108,7 +108,7 @@ Untuk memastikannya kamu bisa melihatnya pada taskbar. Bila tertulis “Waiting 
 <figure>
 	<center>
 		<a href="{{ site.url }}/assets/post/2014-09-07-cara-akses-localhost-di-komputer-lain-08.png" target="_blank"> 
-			<img src="{{ site.url }}/assets/post/2014-09-07-cara-akses-localhost-di-komputer-lain-08.png" width="500px"/>
+			<img src="{{ site.url }}/assets/post/2014-09-07-cara-akses-localhost-di-komputer-lain-08.png" width="300px"/>
 		</a>
 	</center>
 </figure>
@@ -118,16 +118,18 @@ Sekarang coba akses jaringan yang Anda buat tadi di komputer atau laptop lain ya
 <figure>
 	<center>
 		<a href="{{ site.url }}/assets/post/2014-09-07-cara-akses-localhost-di-komputer-lain-09.png" target="_blank"> 
-			<img src="{{ site.url }}/assets/post/2014-09-07-cara-akses-localhost-di-komputer-lain-09.png" width="500px"/>
+			<img src="{{ site.url }}/assets/post/2014-09-07-cara-akses-localhost-di-komputer-lain-09.png" width="300px"/>
 		</a>
 	</center>
 </figure>
 
 Selesai. Sekarang server bisa diakses menggunakan komputer atau laptop lain.
 
-Tambahan jika kamu ingin berbagi koneksi internet:
+---
 
-Klik kanan pada icon jaringan di taskbar, lalu pilih properties, tekan tab sharing dan centang “Allow other network users to connect through this computer’s Internet connection“.
+####Tambahan jika kamu ingin berbagi koneksi internet:
+
+Klik kanan pada icon jaringan di taskbar, lalu pilih **properties**, tekan tab **sharing** dan centang **“Allow other network users to connect through this computer’s Internet connection“**.
 
 <figure>
 	<center>
@@ -141,7 +143,7 @@ Klik kanan pada icon jaringan di taskbar, lalu pilih properties, tekan tab shari
 
 Setelah kedua laptop saling terkoneksi, selanjutnya cari tau **IP Address** milik si server, caranya :
 
-Buka command prompt pada komputer server dengan cara `run` -> ketik `cmd` seperti gambar berikut:
+Buka **command prompt** pada komputer server dengan cara `run` -> ketik `cmd` seperti gambar berikut:
 
 <figure>
 	<center>
@@ -151,7 +153,7 @@ Buka command prompt pada komputer server dengan cara `run` -> ketik `cmd` sepert
 	</center>
 </figure>
 
-Selanjutnya ketik `ipaddress` lalu enter. Berikut letak IP Address si server. (Perhatikan yang diberik warna kuning).
+Selanjutnya ketik `ipaddress` lalu enter. Berikut letak IP Address si server. (Perhatikan yang diberi warna kuning).
 
 <figure>
 	<center>
@@ -162,12 +164,14 @@ Selanjutnya ketik `ipaddress` lalu enter. Berikut letak IP Address si server. (P
 </figure>
 
 
-Pastikan XAMPP si **server** running. Lalu pada komputer **client** yang terkoneksi tadi akses 
+Terakhir pastikan XAMPP milik si **server** running. Lalu pada komputer **client** yang terkoneksi tadi akses **IP Address**nya seperti gambar berikut:
 
 <figure>
 	<center>
 		<a href="{{ site.url }}/assets/post/2014-09-07-cara-akses-localhost-di-komputer-lain-13.PNG" target="_blank"> 
-			<img src="{{ site.url }}/assets/post/2014-09-07-cara-akses-localhost-di-komputer-lain-13.PNG" width="500px"/>
+			<img src="{{ site.url }}/assets/post/2014-09-07-cara-akses-localhost-di-komputer-lain-13.PNG" width="700px"/>
 		</a>
 	</center>
 </figure>
+
+SELESAI.
