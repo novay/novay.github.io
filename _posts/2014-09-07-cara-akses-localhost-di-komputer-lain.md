@@ -176,4 +176,4 @@ Terakhir pastikan XAMPP milik si **server** running. Lalu pada komputer **client
 
 SELESAI.
 
-<small>Credit for images goes to (Oxhow)[http://www.oxhow.com/]. Ane pakek Windows 8 soalnya vroh. XD</small>
+<small>Credit for images goes to [Oxhow](http://www.oxhow.com/). Ane pakek Windows 8 soalnya vroh. XD</small>
